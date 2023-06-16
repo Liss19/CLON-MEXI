@@ -1,0 +1,6781 @@
+@charset "UTF-8";
+/*  Financiera Mexi - WEB
+    Desarrollado: Marzo 03, 2021.
+    Futurité - IV
+*/
+:root {
+  --rosa: #bd2583;
+  --verde: #94ba1d;
+  --azul: #00748a;
+  --amarillo: #f4cc21;
+  --negro-texto: #383838;
+  --blanco: #ffffff;
+  --negro: #000000;
+  --gris-claro: #f3f1f1;
+}
+
+@font-face {
+  font-family: "Bariol_Regular";
+  src: url("../fonts/Bariol_Regular.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "NewJune-Bold";
+  src: url("../fonts/NewJune-Bold.otf") format("opentype");
+  font-display: swap;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "NewJune-Medium-Italic";
+  src: url("../fonts/NewJune-Medium-Italic.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "NewJune-Regular";
+  src: url("../fonts/NewJune-Regular.otf") format("opentype");
+  font-display: swap;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "FiraSans-Regular";
+  src: url("../fonts/FiraSans-Regular.ttf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "FiraSans-Bold";
+  src: url("../fonts/FiraSans-Bold.ttf") format("opentype");
+  font-display: swap;
+  font-weight: 700;
+}
+html, body {
+  font-family: "NewJune-Regular", sans-serif;
+  font-size: 18px;
+  color: var(--negro);
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.pd0 {
+  padding: 0px;
+}
+
+/* *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- */
+/*             Secciones de Pagina              */
+/* *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- */
+/* *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- */
+/*               Header                         */
+/* *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- */
+body {
+  width: 100%;
+  padding-top: 80px;
+}
+
+header {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: var(--blanco);
+  min-height: 50px;
+  position: fixed;
+  top: 0px;
+  z-index: 9999;
+}
+header.menu .container {
+  padding: 0;
+}
+header.menu .navbar-default {
+  background-color: var(--blanco);
+  border-color: transparent;
+  padding: 10px;
+}
+header.menu .navbar-default .navbar-nav > li {
+  margin-top: 15px;
+}
+header.menu .navbar-default .navbar-nav > li span {
+  background: var(--negro-texto);
+  border-radius: 50%;
+  content: "\a";
+  display: inline-block;
+  height: 2px;
+  width: 2px;
+  margin: 25px 0;
+}
+header.menu .navbar-default .navbar-nav > li img {
+  display: block;
+  width: 23px;
+  margin: -5px;
+}
+header.menu .navbar-default .navbar-nav > li .fas {
+  margin-left: 5px;
+}
+header.menu .navbar-default .navbar-nav > li .dropdown-menu {
+  margin-top: 0;
+  border-radius: 6px;
+  left: 0px;
+}
+header.menu .navbar-default .navbar-nav > li > a {
+  color: var(--negro-texto);
+  font-size: 15px;
+  font-family: "NewJune-Bold", sans-serif;
+}
+header.menu .navbar-default .navbar-nav > li > a:hover {
+  color: var(--rosa);
+}
+header.menu .navbar-default .navbar-nav > .active > a,
+header.menu .navbar-default .navbar-nav > .active > a:hover {
+  color: var(--negro-texto);
+  background-color: transparent;
+}
+header.menu .navbar-default .navbar-nav > .active > a:focus {
+  color: var(--rosa);
+}
+header.menu .navbar-default .navbar-nav > .active > a:visited {
+  color: var(--rosa);
+}
+header.menu .navbar {
+  margin-bottom: 0px;
+  border: 0px solid transparent;
+}
+header.menu .navbar-brand {
+  height: auto;
+}
+header.menu .navbar-brand img {
+  margin-top: -10px;
+  width: 222px;
+  height: 50px;
+}
+@media (max-width: 479px) and (min-width: 0px) {
+  header.menu .navbar-brand img {
+    width: 200px;
+  }
+}
+header.menu .navbar-default .navbar-nav > .open > a, header.menu .navbar-default .navbar-nav > .open > a:focus, header.menu .navbar-default .navbar-nav > .open > a:hover {
+  color: var(--rosa);
+  background-color: transparent;
+}
+header.menu .dropdown-menu > .active > a, header.menu .dropdown-menu > .active > a:focus, header.menu .dropdown-menu > .active > a:hover {
+  background-color: #cccccc;
+  color: var(--rosa);
+  font-weight: 700;
+}
+
+.map-container {
+  height: 30vh;
+  width: 50vh;
+  
+  top: 50%;
+  left: 36%;
+}
+
+/* *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- */
+/*              Footer and Copy                 */
+/* *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- */
+footer {
+  /* Medias query */
+}
+footer .f-sec1 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/Img_Fondo_Footer.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 450px;
+  height: auto;
+  padding: 40px 0px;
+}
+footer .f-sec1 .title-footer {
+  font-size: 35px;
+  text-align: center;
+  color: var(--blanco);
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+footer .f-sec1 .green-line {
+  background: var(--verde);
+  height: 5px;
+  width: 7%;
+  margin: auto;
+  display: block;
+  margin-bottom: 50px;
+}
+footer .f-sec1 .text-form {
+  color: var(--negro-texto);
+  font-size: 22px;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 30px;
+}
+footer .f-sec1 .text-form .parrafo-footer {
+  color: var(--negro-texto);
+  font-size: 24px;
+  font-family: "NewJune-Bold", sans-serif;
+}
+footer .f-sec1 .text-form .tel-footer {
+  color: var(--blanco);
+  text-decoration: none;
+}
+footer .f-sec1 .redes {
+  color: var(--blanco);
+  font-size: 24px;
+  font-family: "NewJune-Bold", sans-serif;
+  float: left;
+  display: contents;
+}
+footer .f-sec1 .redes ul {
+  display: inline-block;
+  list-style: none;
+  padding: 15px 0px;
+  margin: 0px;
+}
+footer .f-sec1 .redes ul li {
+  display: inline-block;
+}
+footer .f-sec1 .redes ul li .link-red {
+  display: block;
+  width: 100%;
+  max-width: 60px;
+  margin: 0 7px;
+}
+footer .f-sec1 .form-footer {
+  background: var(--rosa);
+  padding: 20px;
+  min-height: 460px;
+  height: auto;
+}
+footer .f-sec1 .form-footer .title-form {
+  color: var(--blanco);
+  font-family: "NewJune-Medium-Italic", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+footer .f-sec1 .form-footer label {
+  width: 100%;
+  color: var(--blanco);
+  font-size: 14px;
+}
+footer .f-sec1 .form-footer input {
+  width: 100%;
+  color: var(--negro-texto);
+  border: none;
+}
+footer .f-sec1 .form-footer textarea {
+  width: 100%;
+  color: var(--negro-texto);
+  border: none;
+}
+footer .f-sec1 .form-footer button {
+  background: var(--verde);
+  color: var(--blanco);
+  font-size: 14px;
+  border: none;
+  float: right;
+  padding: 5px 50px;
+  margin-top: 10px;
+  font-family: "NewJune-Medium-Italic", sans-serif;
+  font-weight: 700;
+}
+footer .f-sec1 .copy {
+  text-align: center;
+  font-size: 12px;
+  color: var(--negro-texto);
+  margin-top: 50px;
+}
+footer .f-sec1 .copy .link-fut {
+  color: var(--negro-texto);
+}
+footer .f-sec2 {
+  display: inline-block;
+  width: 100%;
+  min-height: 100px;
+  height: auto;
+  vertical-align: top;
+  background: var(--azul);
+  padding: 30px 0px;
+}
+footer .f-sec2 .aliados {
+  display: block;
+  margin: auto;
+}
+footer .f-sec2 .aliados .aliado {
+  width: calc((100% - 40px) / 5);
+  display: inline-block;
+}
+footer .f-sec2 .aliados .aliado .img-aliado1 {
+  margin: auto;
+  display: block;
+  margin-top: -40px;
+  max-width: 100%;
+}
+footer .f-sec2 .aliados .aliado .img-aliado {
+  margin: auto;
+  display: block;
+  max-width: 100%;
+}
+footer .f-sec2 .aliados .aliado2 {
+  width: calc((100% - 20px) / 3);
+  display: inline-block;
+}
+footer .f-sec2 .aliados .aliado2 .img-aliado1 {
+  margin: auto;
+  display: block;
+  margin-top: -40px;
+}
+footer .f-sec2 .aliados .aliado2 .img-aliado {
+  margin: auto;
+  display: block;
+}
+footer .f-sec3 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: var(--rosa);
+  text-align: center;
+  padding: 20px 0px;
+}
+footer .f-sec3 .derechos {
+  display: inline-block;
+}
+footer .f-sec3 .derechos .avi {
+  list-style: none;
+  color: var(--blanco);
+  border-right: 2px solid var(--blanco);
+  min-height: 50px;
+  padding: 0px 30px;
+}
+footer .f-sec3 .derechos .avi a {
+  font-size: 16px;
+  font-family: "NewJune-Bold", sans-serif;
+  color: var(--blanco);
+}
+footer .f-sec3 .derechos .avi2 {
+  list-style: none;
+  color: var(--blanco);
+  min-height: 50px;
+  padding: 0px 30px;
+}
+footer .f-sec3 .derechos .avi2 a {
+  font-size: 16px;
+  font-family: "NewJune-Bold", sans-serif;
+  color: var(--blanco);
+}
+footer .politicas {
+  display: inline-block;
+  width: 100%;
+  padding: 20px 0px;
+  vertical-align: top;
+  background: var(--blanco);
+}
+footer .politicas p {
+  font-size: 10px;
+  color: var(--negro-texto);
+  text-align: center;
+}
+footer .f-sec4 {
+  display: inline-block;
+  width: 100%;
+  padding: 20px 0px;
+  vertical-align: top;
+  background: var(--blanco);
+}
+footer .f-sec4 .copy {
+  text-align: center;
+  font-size: 12px;
+  color: var(--negro-texto);
+}
+footer .f-sec4 .copy .link-fut {
+  color: var(--negro-texto);
+}
+@media (max-width: 767px) and (min-width: 570px) {
+  footer .f-sec2 .aliados .aliado {
+    width: calc((100% - 40px) / 2);
+  }
+  footer .f-sec2 .aliados .aliado2 {
+    width: calc((100% - 20px) / 1);
+    margin: 4% 0;
+  }
+  footer .f-sec2 .aliados .aliado2 .img-aliado1 {
+    margin-top: 0px;
+    max-width: 100%;
+  }
+  footer .f-sec2 .aliados .aliado2 .img-aliado {
+    max-width: 100%;
+  }
+}
+@media (max-width: 569px) and (min-width: 480px) {
+  footer .f-sec2 .aliados .aliado {
+    width: calc((100% - 20px) / 2);
+    padding: 15px;
+  }
+  footer .f-sec2 .aliados .aliado2 {
+    width: calc((100% - 20px) / 1);
+    margin: 4% 0;
+  }
+  footer .f-sec2 .aliados .aliado2 .img-aliado1 {
+    margin-top: 0px;
+    max-width: 100%;
+  }
+  footer .f-sec2 .aliados .aliado2 .img-aliado {
+    max-width: 100%;
+  }
+}
+@media (max-width: 479px) and (min-width: 0px) {
+  footer .f-sec1 .container {
+    padding: 0;
+  }
+  footer .f-sec2 .aliados .aliado {
+    width: calc((100% - 20px) / 2);
+    padding: 15px;
+  }
+  footer .f-sec2 .aliados .aliado2 {
+    width: calc((100% - 20px) / 1);
+    margin: 4% 0;
+  }
+  footer .f-sec2 .aliados .aliado2 .img-aliado1 {
+    margin-top: 0px;
+    max-width: 100%;
+  }
+  footer .f-sec2 .aliados .aliado2 .img-aliado {
+    max-width: 100%;
+  }
+  footer .f-sec3 .derechos .avi {
+    border-right: none;
+    margin-bottom: 15px;
+  }
+}
+
+/* Home Section */
+.home .h-sec1 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/home/Img_BannerPrincipal.webp);
+  /*min-height: 500px;*/
+  padding: 12% 0;
+  background-position: center;
+  background-size: cover;
+}
+.home .h-sec1 .title {
+  /*margin-top: 100px;*/
+  /*padding: 8%;*/
+}
+.home .h-sec1 .title h1 {
+  margin-bottom: 0;
+}
+.home .h-sec1 .title h1 .title1a {
+  color: var(--blanco);
+  background: var(--rosa);
+  /*font-family: 'Bariol_Regular', sans-serif;*/
+  /*font-size: 50px;*/
+  font-weight: 700;
+  padding: 8px 15px;
+  display: inline-block;
+}
+.home .h-sec1 .title h1 .title1b {
+  color: var(--blanco);
+  background: var(--verde);
+  /*font-size: 35px;*/
+  padding: 2px 10px;
+  display: inline-block;
+  font-family: "NewJune-Medium-Italic", sans-serif;
+}
+.home .h-sec1 .title h1 .title1c {
+  color: var(--blanco);
+  background: var(--azul);
+  /*font-size: 35px;*/
+  padding: 5px 10px;
+  font-family: "NewJune-Medium-Italic", sans-serif;
+  display: inline-block;
+  /*margin-top: 5px;*/
+}
+.home .h-sec1 .title h2 {
+  margin-top: 0px;
+}
+.home .h-sec1 .title h2 .color_verde {
+  color: var(--blanco);
+  background: var(--verde);
+  font-family: "Bariol_Regular", sans-serif;
+  /*font-size: 40px;*/
+  font-weight: 700;
+  padding: 8px 15px;
+  display: inline-block;
+  margin-bottom: 0px;
+  line-height: 1;
+  /*width: 45%;*/
+}
+.home .h-sec1 .title h2 .color_azul {
+  color: var(--blanco);
+  background: var(--azul);
+  font-family: "Bariol_Regular", sans-serif;
+  /*font-size: 40px;*/
+  font-weight: 700;
+  padding: 8px 15px;
+  display: inline-block;
+  line-height: 1;
+  /*width: 45%;*/
+}
+.home .h-sec2 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/home/Img_Fondo_Desde2006.webp) center center no-repeat;
+  background-size: cover;
+  /*min-height: 500px;
+  height: auto;*/
+  padding: 30px 0px;
+}
+.home .h-sec2 .description {
+  color: var(--amarillo);
+  font-size: 40px;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 20px;
+}
+.home .h-sec2 .description .title2a {
+  color: var(--blanco);
+  font-size: 20px;
+  display: inline-block;
+}
+.home .h-sec2 .desde {
+  width: 596px;
+  height: 442px;
+}
+.home .h-sec3 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/home/Img_Fondo_Creditos.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 700px;
+  height: auto;
+  padding: 30px 0px;
+}
+.home .h-sec3 h2 {
+  text-align: center;
+  color: var(--negro-texto);
+  /*font-size: 35px;*/
+  font-family: "NewJune-Bold", sans-serif;
+  margin-bottom: 20px;
+}
+.home .h-sec3 .green-line {
+  background: var(--verde);
+  width: 7%;
+  height: 5px;
+  margin: auto;
+  display: block;
+  margin-top: 20px;
+}
+.home .h-sec3 .title3 {
+  text-align: center;
+  /*font-size: 18px;*/
+  color: var(--rosa);
+  font-weight: 700;
+  margin-top: 20px;
+}
+.home .h-sec3 .prestamos1 {
+  display: inline-block;
+  width: 100%;
+  margin-top: 30px;
+  /*.img-credito2 {
+      		margin: auto;
+      		display: block;
+  width: 178px;
+  height: 76px;
+      	}*/
+}
+.home .h-sec3 .prestamos1 .img-credito {
+  margin: auto;
+  display: block;
+  width: 210px;
+  height: 149px;
+}
+.home .h-sec3 .prestamos1 .credit-title h3 a {
+  color: var(--negro-texto) !important;
+  text-align: center;
+  /*font-size: 25px;*/
+  font-family: "NewJune-Bold", sans-serif;
+}
+.home .h-sec3 .prestamos1 .credit-title .descripcion {
+  color: var(--negro-texto);
+  text-align: center;
+  /*font-size: 16px;*/
+  display: block;
+  font-family: "NewJune-Regular", sans-serif;
+}
+.home .h-sec3 .prestamos2 {
+  display: block;
+  margin: auto;
+  width: 50%;
+  margin-top: 50px;
+}
+.home .h-sec3 .prestamos2 .img-credito3 {
+  margin: auto;
+  display: block;
+  width: 85%;
+  height: 153px;
+}
+.home .h-sec3 .prestamos2 .img-credito4 {
+  margin: 18% auto 20%;
+  display: block;
+  width: 212px;
+  height: 75px;
+}
+.home .h-sec3 .prestamos2 .credit-title h3 a {
+  color: var(--negro-texto) !important;
+  text-align: center;
+  /*font-size: 25px;*/
+  font-family: "NewJune-Bold", sans-serif;
+}
+.home .h-sec3 .prestamos2 .credit-title .descripcion {
+  color: var(--negro-texto);
+  text-align: center;
+  /*font-size: 16px;*/
+  display: block;
+  font-family: "NewJune-Regular", sans-serif;
+}
+.home .h-sec4 .fondo-verde {
+  display: inline-block;
+  min-height: 300px;
+  height: auto;
+  vertical-align: top;
+  background: var(--verde);
+  padding: 50px 40px;
+}
+.home .h-sec4 .fondo-verde .title4a {
+  color: var(--blanco);
+  /*font-size: 30px;*/
+  font-family: "NewJune-Bold", sans-serif;
+  margin-bottom: 20px;
+}
+.home .h-sec4 .fondo-verde .rose-line {
+  background: var(--rosa);
+  height: 5px;
+  width: 10%;
+  margin-bottom: 20px;
+}
+.home .h-sec4 .fondo-verde .titleb {
+  color: var(--blanco);
+  font-size: 18px;
+}
+.home .h-sec4 .familia {
+  display: inline-block;
+  vertical-align: top;
+  background: url(../img/home/Img_ProyectosSuenoRegalos.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 300px;
+  height: auto;
+}
+.home .h-sec5 {
+  display: inline-block;
+  width: 100%;
+  min-height: 550px;
+  height: auto;
+  vertical-align: top;
+  background: var(--amarillo);
+  padding: 50px 0px;
+}
+.home .h-sec5 h2 {
+  text-align: center;
+  color: var(--negro-texto);
+  /*font-size: 35px;*/
+  font-family: "NewJune-Bold", sans-serif;
+  margin-bottom: 20px;
+}
+.home .h-sec5 .rose-line {
+  background: var(--rosa);
+  height: 5px;
+  width: 5%;
+  margin: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+.home .h-sec5 .seguros {
+  margin-top: 50px;
+}
+.home .h-sec5 .seguros .img-seguro {
+  margin: auto;
+  display: block;
+  width: 229px;
+  height: 100px;
+}
+.home .h-sec5 .seguros .img-seguro1 {
+  margin: auto;
+  display: block;
+  width: 75%;
+  margin-top: 30px;
+}
+.home .h-sec5 .seguros .line1 {
+  background: var(--azul);
+  height: 5px;
+  width: 20%;
+  margin: auto;
+  display: block;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.home .h-sec5 .seguros .line2 {
+  background: var(--rosa);
+  height: 5px;
+  width: 20%;
+  margin: auto;
+  display: block;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.home .h-sec5 .seguros .line3 {
+  background: var(--verde);
+  height: 5px;
+  width: 20%;
+  margin: auto;
+  display: block;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.home .h-sec5 .seguros .line4 {
+  background: var(--azul);
+  height: 5px;
+  width: 20%;
+  margin: auto;
+  display: block;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.home .h-sec5 .seguros .title5 {
+  color: var(--negro-texto);
+  text-align: center;
+  /*font-size: 14px;*/
+}
+.home .h-sec5 .seguros .title5 a {
+  /*font-size: 20px;*/
+  font-family: "NewJune-Bold", sans-serif;
+  color: var(--negro-texto);
+  text-align: center;
+}
+.home .h-sec6 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: #02718c;
+  background-size: cover;
+  min-height: 500px;
+  height: auto;
+}
+.home .h-sec6 .sec6 .img-colibri  {
+  width: 124px;
+  height: 120px;
+}
+.home .h-sec6 .sec6 .title6 {
+  border-left: 10px solid var(--amarillo);
+  font-size: 30px;
+  color: var(--blanco);
+  font-family: "NewJune-Bold", sans-serif;
+  padding: 0px 20px;
+  margin-left: 30px;
+}
+.home .h-sec6 .sec6 .title6 .title6a {
+  /*font-size: 16px;*/
+  color: var(--blanco);
+  font-family: "NewJune-Regular", sans-serif;
+  display: block;
+  margin-top: 0px;
+  margin-bottom: -5px;
+}
+.home .h-sec6 .sec6 .fondo_azul {
+  margin-top: 50px;
+}
+.home .h-sec6 .foto_de_ventajas {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/home/home-ventajas-financiera-mexi.webp) center center no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  height: auto;
+}
+.home .h-sec7 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/home/Img_Fondo_Sucursales.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 600px;
+  height: auto;
+  border-top: 10px solid var(--amarillo);
+  border-bottom: 10px solid var(--amarillo);
+  padding: 30px 0px;
+}
+.home .h-sec7 h2 {
+  text-align: center;
+  color: var(--negro-texto);
+  /*font-size: 35px;*/
+  font-family: "NewJune-Bold", sans-serif;
+  margin-bottom: 20px;
+}
+.home .h-sec7 .green-line {
+  background: var(--verde);
+  height: 5px;
+  width: 7%;
+  margin: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+.home .h-sec7 .mapa .img-map {
+  display: block;
+  margin: auto;
+  width: 716px;
+  height: 470px;
+}
+.home .h-sec7 .mapa .presencia {
+  margin-top: 40px;
+}
+.home .h-sec7 .mapa .presencia .titlepresencia {
+  color: var(--rosa);
+  /*font-size: 30px;*/
+  font-family: "NewJune-Bold", sans-serif;
+  margin-bottom: 20px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+.home .h-sec7 .mapa .presencia .titlepresencia .colib {
+  width: 105px;
+  height: 101px;
+}
+.home .h-sec7 .mapa .presencia .img-col {
+  float: left;
+  margin-left: -80px;
+}
+.home .h-sec7 .mapa .presencia .list {
+  color: var(--rosa);
+}
+.home .h-sec7 .mapa .presencia .list .lista-text {
+  /*font-size: 21px;*/
+  color: var(--negro-texto);
+  display: inline-block;
+}
+.home .h-sec8 .fondo-rosa {
+  display: inline-block;
+  min-height: 500px;
+  height: auto;
+  vertical-align: top;
+  background: var(--rosa);
+  padding: 50px 70px;
+}
+.home .h-sec8 .fondo-rosa .prestamostitle {
+  /*font-size: 30px;*/
+  color: var(--blanco);
+  font-family: "NewJune-Bold", sans-serif;
+  margin-bottom: 20px;
+}
+.home .h-sec8 .fondo-rosa .yellow-line {
+  background: var(--amarillo);
+  height: 5px;
+  width: 7%;
+  margin-bottom: 20px;
+}
+.home .h-sec8 .fondo-rosa .text8 {
+  color: var(--blanco);
+  /*font-size: 16px;*/
+}
+.home .h-sec8 .prestamos {
+  display: inline-block;
+  vertical-align: top;
+  background: url(../img/home/Img_PrestamosInmediatos.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  height: auto;
+}
+.home .h-sec9 {
+  display: inline-block;
+  width: 100%;
+  min-height: 500px;
+  height: auto;
+  vertical-align: top;
+  background: var(--blanco);
+  padding: 50px 0px;
+}
+.home .h-sec9 .dudas {
+  margin-bottom: 20px;
+}
+.home .h-sec9 .faqs {
+  width: 70%;
+  margin: auto;
+  display: block;
+}
+.home .h-sec9 .faqs .panel-group {
+  border: 2px solid var(--verde);
+  margin-bottom: 30px;
+  background: var(--blanco);
+}
+.home .h-sec9 .faqs .panel-group .panel-title {
+  color: var(--negro-texto);
+  font-size: 18px;
+}
+.home .h-sec9 .faqs .panel-group .fas {
+  color: var(--rosa);
+  font-size: 25px;
+}
+.home .h-sec9 .faqs .panel-collapse .panel-body .desc-vacante {
+  margin-bottom: 20px;
+}
+.home .h-sec9 .faqs .panel-collapse .panel-body .desc-vacante .title-faqs {
+  color: var(--negro-texto);
+  font-family: "NewJune-Bold", sans-serif;
+  font-size: 14px;
+}
+.home .h-sec9 .faqs .panel-collapse .panel-body .desc-vacante .list-faqs {
+  color: var(--rosa);
+  line-height: 2px;
+}
+.home .h-sec9 .faqs .panel-collapse .panel-body .desc-vacante .list-faqs .text-vacante {
+  color: var(--negro-texto);
+  font-size: 12px;
+}
+.home .glide__slide {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 650px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.home .glide__slide.slide1 {
+  background-image: url(../img/home/mexi-banners-dxn-3.jpg);
+}
+.home .glide__slide.slide1 .encabezado {
+  padding: 0 15%;
+}
+.home .glide__slide.slide1 .encabezado .bmexi {
+  color: var(--blanco);
+  font-size: 32px !important;
+  font-weight: 700;
+  font-family: "Fira Sans", sans-serif;
+}
+.home .glide__slide.slide1 .encabezado .bmexi .subrayado {
+  color: var(--amarillo);
+  font-family: "Fira Sans", sans-serif;
+}
+.home .glide__slide.slide1 .encabezado h1 {
+  font-size: 40px !important;
+  color: var(--blanco);
+  font-weight: 700;
+  padding-right: 50%;
+  line-height: 1.3;
+  font-family: "Fira Sans", sans-serif;
+}
+.home .glide__slide.slide1 .encabezado .cajarosa {
+  margin-top: 25px;
+  background-color: var(--rosa);
+  width: 46%;
+  text-align: center;
+  padding: 5px 0;
+}
+.home .glide__slide.slide1 .encabezado .cajarosa p {
+  font-size: 27px !important;
+  color: var(--blanco);
+  font-family: "Fira Sans", sans-serif;
+}
+.home .glide__slide.slide2 {
+  background-image: url(../img/home/mexi-banner-01-4.jpg);
+}
+.home .glide__slide.slide2 .encabezado {
+  padding: 0 15%;
+}
+.home .glide__slide.slide2 .encabezado .bmexi {
+  color: var(--blanco);
+  font-size: 32px !important;
+  font-weight: 700;
+  font-family: "Fira Sans", sans-serif;
+}
+.home .glide__slide.slide2 .encabezado .bmexi .subrayado {
+  color: var(--amarillo);
+}
+.home .glide__slide.slide2 .encabezado h2 {
+  font-size: 40px !important;
+  color: var(--blanco);
+  font-weight: 700;
+  padding-right: 60%;
+  line-height: 1.3;
+  font-family: "Fira Sans", sans-serif;
+}
+.home .glide__slide.slide2 .encabezado .cajarosa {
+  margin-top: 25px;
+  width: 49%;
+  text-align: left;
+  padding: 18px 0;
+  border-top: 3px solid var(--amarillo);
+}
+.home .glide__slide.slide2 .encabezado .cajarosa p {
+  font-size: 27px !important;
+  color: var(--blanco);
+  font-family: "Fira Sans", sans-serif;
+  padding-left: 10px;
+}
+.home .glide__arrow {
+  display: none;
+}
+.home .glide__bullets {
+  display: none;
+}
+@media (max-width: 1200px) and (min-width: 990px) {
+  .home .h-sec4 .familia {
+    min-height: 400px;
+  }
+  .home .h-sec4 .fondo-verde {
+    min-height: 400px;
+  }
+  .home .h-sec7 .mapa .presencia .img-col {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 989px) and (min-width: 768px) {
+  .home .h-sec2 .title2 {
+    width: 100%;
+    padding-right: 150px;
+  }
+  .home .h-sec4 .familia {
+    min-height: 400px;
+  }
+  .home .h-sec4 .fondo-verde {
+    min-height: 400px;
+  }
+  .home .h-sec5 .seguros .img-seguro {
+    width: 150px;
+    height: 65px;
+  }
+  .home .h-sec6  {
+    /*.container {
+        width: 950px;
+    }*/
+  }
+  .home .h-sec7 .mapa .img-map {
+    width: 540px;
+    height: 354px;
+  }
+  .home .h-sec7 .mapa .presencia .img-col {
+    margin-left: 0px;
+  }
+  .home .h-sec8 .fondo-rosa {
+    min-height: 400px;
+  }
+  .home .h-sec8 .prestamos {
+    min-height: 400px;
+  }
+}
+@media (max-width: 767px) and (min-width: 480px) {
+  .home .h-sec1 {
+    min-height: 300px;
+  }
+  .home .h-sec2 .desde {
+    max-width: 100%;
+  }
+  .home .h-sec3 .prestamos1 .credit-title {
+    margin-bottom: 20px;
+  }
+  .home .h-sec3 .prestamos2 .credit-title {
+    margin-bottom: 20px;
+  }
+  .home .h-sec4 .fondo-verde {
+    width: 100%;
+  }
+  .home .h-sec4 .familia {
+    width: 100%;
+  }
+  .home .h-sec5 .seguros .title5 {
+    margin-bottom: 25px;
+  }
+  .home .h-sec8 .fondo-rosa {
+    width: 100%;
+  }
+  .home .h-sec8 .prestamos {
+    width: 100%;
+  }
+  .home .glide__slide {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .home .glide__slide.slide1 {
+    background-image: url(../img/home/mexi-banners-dxn-3-res.jpg);
+  }
+  .home .glide__slide.slide1 .encabezado {
+    -webkit-transform: translateY(70%);
+        -ms-transform: translateY(70%);
+            transform: translateY(70%);
+    margin-left: 10%;
+  }
+  .home .glide__slide.slide1 .encabezado .bmexi {
+    color: var(--blanco);
+    font-size: 32px !important;
+    font-weight: 700;
+  }
+  .home .glide__slide.slide1 .encabezado .bmexi .subrayado {
+    color: var(--amarillo);
+  }
+  .home .glide__slide.slide1 .encabezado h1 {
+    font-size: 40px !important;
+    color: var(--blanco);
+    font-weight: 700;
+    padding-right: 0;
+    line-height: 1.3;
+    padding-left: 5%;
+    margin-top: 50px;
+  }
+  .home .glide__slide.slide1 .encabezado .cajarosa {
+    margin-top: 50px;
+    background-color: var(--rosa);
+    width: 90%;
+    text-align: center;
+    padding: 25px 0;
+  }
+  .home .glide__slide.slide1 .encabezado .cajarosa p {
+    font-size: 27px !important;
+    color: var(--blanco);
+  }
+  .home .glide__slide.slide2 {
+    background-image: url(../img/home/mexi-banner-01-4-res.jpg);
+  }
+  .home .glide__slide.slide2 .encabezado {
+    -webkit-transform: translateY(70%);
+        -ms-transform: translateY(70%);
+            transform: translateY(70%);
+    margin-left: 4%;
+  }
+  .home .glide__slide.slide2 .encabezado .bmexi {
+    color: var(--blanco);
+    font-size: 32px !important;
+    font-weight: 700;
+  }
+  .home .glide__slide.slide2 .encabezado .bmexi .subrayado {
+    color: var(--amarillo);
+  }
+  .home .glide__slide.slide2 .encabezado h2 {
+    font-size: 40px !important;
+    color: var(--blanco);
+    font-weight: 700;
+    padding-right: 2%;
+    line-height: 1.3;
+    margin-top: 50px;
+  }
+  .home .glide__slide.slide2 .encabezado .cajarosa {
+    margin-top: 50px;
+    width: 95%;
+    text-align: left;
+    padding: 18px 0;
+    border-top: 3px solid var(--amarillo);
+  }
+  .home .glide__slide.slide2 .encabezado .cajarosa p {
+    font-size: 27px !important;
+    color: var(--blanco);
+  }
+}
+/*@media (max-width: 569px) and (min-width: 480px) {
+	.home {
+
+	}
+}*/
+@media (max-width: 479px) and (min-width: 0px) {
+  .home .h-sec1 {
+    min-height: 300px;
+  }
+  .home .h-sec1 .title {
+    margin-top: 0px;
+    line-height: 1;
+    padding: 0 8%;
+  }
+  .home .h-sec2 {
+    background-position-x: inherit;
+  }
+  .home .h-sec2 .container {
+    padding: 0;
+  }
+  .home .h-sec2 .title2 {
+    width: 100%;
+    font-size: 30px;
+  }
+  .home .h-sec2 .description {
+    line-height: 1.1;
+    margin-top: 5px;
+  }
+  .home .h-sec2 .desde {
+    width: 100%;
+    height: auto;
+  }
+  .home .h-sec3 {
+    padding: 30px 20px;
+  }
+  .home .h-sec3 .prestamos2 {
+    width: 100%;
+    margin-top: 0px;
+  }
+  .home .h-sec6 {
+    padding-bottom: 10%;
+  }
+  .home .h-sec6 .title6 {
+    margin-left: 10px !important;
+  }
+  .home .h-sec6 .title6 ul {
+    padding-left: 20px;
+  }
+  .home .h-sec6 .foto_de_ventajas {
+    margin-top: 3%;
+  }
+  .home .h-sec7 .mapa .img-map {
+    width: 340px;
+    height: 223px;
+  }
+  .home .h-sec7 .mapa .presencia .img-col {
+    margin-left: -20px;
+  }
+  .home .h-sec8 .fondo-rosa {
+    padding: 8%;
+  }
+  .home .h-sec9 .faqs {
+    width: 100%;
+  }
+  .home .glide__slide {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .home .glide__slide.slide1 {
+    background-image: url(../img/home/mexi-banners-dxn-3-res.jpg);
+  }
+  .home .glide__slide.slide1 .encabezado {
+    -webkit-transform: translateY(35%);
+        -ms-transform: translateY(35%);
+            transform: translateY(35%);
+  }
+  .home .glide__slide.slide1 .encabezado .bmexi {
+    color: var(--blanco);
+    font-size: 32px !important;
+    font-weight: 700;
+  }
+  .home .glide__slide.slide1 .encabezado .bmexi .subrayado {
+    color: var(--amarillo);
+  }
+  .home .glide__slide.slide1 .encabezado h1 {
+    font-size: 40px !important;
+    color: var(--blanco);
+    font-weight: 700;
+    padding-right: 5%;
+    line-height: 1.3;
+    margin-top: 50px;
+  }
+  .home .glide__slide.slide1 .encabezado .cajarosa {
+    margin-top: 50px;
+    background-color: var(--rosa);
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+  }
+  .home .glide__slide.slide1 .encabezado .cajarosa p {
+    font-size: 24px !important;
+    color: var(--blanco);
+    text-align: left;
+    padding-left: 10px;
+  }
+  .home .glide__slide.slide2 {
+    background-image: url(../img/home/mexi-banner-01-4-res.jpg);
+  }
+  .home .glide__slide.slide2 .encabezado {
+    -webkit-transform: translateY(35%);
+        -ms-transform: translateY(35%);
+            transform: translateY(35%);
+  }
+  .home .glide__slide.slide2 .encabezado .bmexi {
+    color: var(--blanco);
+    font-size: 32px !important;
+    font-weight: 700;
+  }
+  .home .glide__slide.slide2 .encabezado .bmexi .subrayado {
+    color: var(--amarillo);
+  }
+  .home .glide__slide.slide2 .encabezado h2 {
+    font-size: 40px !important;
+    color: var(--blanco);
+    font-weight: 700;
+    padding-right: 2%;
+    line-height: 1.3;
+    margin-top: 50px;
+  }
+  .home .glide__slide.slide2 .encabezado .cajarosa {
+    margin-top: 50px;
+    width: 100%;
+    text-align: left;
+    padding: 18px 0;
+    border-top: 3px solid var(--amarillo);
+  }
+  .home .glide__slide.slide2 .encabezado .cajarosa p {
+    font-size: 24px !important;
+    color: var(--blanco);
+  }
+}
+/* Sucursales Section */
+.sucursales .suc-sec1 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/sucursales/Locations_Mexi.png) center center no-repeat;
+  background-size: cover;
+  padding: 15% 0;
+  /*display: inline-block;
+        width: 100%;
+        vertical-align: top;
+        background: url(../img/sucursales/Locations_Mexi.png) center top no-repeat;
+        background-size: cover;
+        min-height: 500px;
+        height: auto;
+        .titlesuc-sec1 {
+        	background: var(--rosa);
+        	color: var(--blanco);
+        	font-size: 80px;
+        	margin-top: 150px;
+        	padding: 0px 30px;
+            display: inline-block;
+        	font-family: 'Bariol_Regular', sans-serif;
+        	font-weight: 700;
+        }*/
+}
+.sucursales .suc-sec1 .titlesuc-sec1 {
+  text-transform: uppercase;
+  display: inline-block;
+  background: var(--rosa);
+  color: var(--blanco);
+  padding: 12px 20px;
+  width: 45%;
+  font-weight: 700;
+}
+.sucursales .suc-sec2 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/sucursales/Fondo_EnFinancieriaMEXI.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 300px;
+  height: auto;
+}
+.sucursales .suc-sec2 .titlesuc-sec2 {
+  text-align: center;
+  color: var(--azul);
+  font-size: 35px;
+  font-weight: 700;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 50px;
+  display: block;
+}
+.sucursales .suc-sec2 .titlesuc-sec2 .titlesuc-sec2a {
+  text-align: center;
+  color: var(--rosa);
+  font-size: 35px;
+  font-weight: 700;
+}
+.sucursales .suc-sec2 .green-line {
+  height: 5px;
+  width: 10%;
+  background: var(--verde);
+  margin: auto;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.sucursales .suc-sec2 .titlesuc-sec2b {
+  text-align: center;
+  color: var(--negro-texto);
+  font-size: 28px;
+  font-weight: 700;
+  font-family: "NewJune-Bold", sans-serif;
+}
+.sucursales .suc-sec3 .fondo-blanco {
+  display: inline-block;
+  height: 300px;
+  vertical-align: top;
+  background: var(--blanco);
+  overflow-x: auto;
+  border: 1px solid #ededed;
+}
+.sucursales .suc-sec3 .fondo-blanco .prod .rose {
+  font-size: 50px;
+  font-family: "NewJune-Bold", sans-serif;
+  color: var(--rosa);
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin-top: 130px;
+}
+.sucursales .suc-sec3 .fondo-blanco .prod p {
+  font-size: 16px;
+  color: var(--negro-texto);
+}
+.sucursales .suc-sec3 .fondo-blanco .prod.oficinas p {
+  display: none;
+}
+.sucursales .suc-sec3 .fondo-blanco .prod.oficinas:hover {
+  overflow-x: auto;
+  display: block;
+  padding: 30px 0px;
+}
+.sucursales .suc-sec3 .fondo-blanco .prod.oficinas:hover .rose {
+  text-align: left;
+  font-size: 30px;
+  margin-top: 0px;
+}
+.sucursales .suc-sec3 .fondo-blanco .prod.oficinas:hover .line {
+  background: var(--azul);
+  height: 5px;
+  width: 5%;
+}
+.sucursales .suc-sec3 .fondo-blanco .prod.oficinas:hover p {
+  display: block;
+  color: var(--negro-texto);
+  font-size: 18px;
+}
+.sucursales .suc-sec3 .fondo-blanco .prod.oficinas:hover p .title-sucursal {
+  font-size: 18px;
+  color: var(--azul);
+  font-family: "NewJune-Bold", sans-serif;
+}
+.sucursales .suc-sec3 .fondo-blanco .prod.oficinas:hover p .tel-sucursal {
+  font-size: 18px;
+  color: var(--rosa);
+  font-family: "NewJune-Bold", sans-serif;
+}
+.sucursales .suc-sec3 .fondo-blanco .prod.oficinas:hover p .atencion {
+  font-size: 18px;
+  color: var(--rosa);
+  font-family: "NewJune-Bold", sans-serif;
+}
+.sucursales .suc-sec3 .fondo-rosa {
+  display: inline-block;
+  height: 300px;
+  vertical-align: top;
+  background: var(--rosa);
+  overflow-x: auto;
+}
+.sucursales .suc-sec3 .fondo-rosa .prod .white {
+  font-size: 50px;
+  font-family: "NewJune-Bold", sans-serif;
+  color: var(--blanco);
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin-top: 130px;
+}
+.sucursales .suc-sec3 .fondo-rosa .prod p {
+  font-size: 16px;
+  color: var(--negro-texto);
+}
+.sucursales .suc-sec3 .fondo-rosa .prod.oficinas-r p {
+  display: none;
+}
+.sucursales .suc-sec3 .fondo-rosa .prod.oficinas-r:hover {
+  display: block;
+  overflow-x: auto;
+  background: var(--blanco);
+  padding: 30px 10px;
+  height: 300px;
+}
+.sucursales .suc-sec3 .fondo-rosa .prod.oficinas-r:hover .white {
+  text-align: left;
+  font-size: 30px;
+  margin-top: 0px;
+  color: var(--rosa);
+}
+.sucursales .suc-sec3 .fondo-rosa .prod.oficinas-r:hover .line {
+  background: var(--azul);
+  height: 5px;
+  width: 5%;
+}
+.sucursales .suc-sec3 .fondo-rosa .prod.oficinas-r:hover p {
+  display: block;
+  color: var(--negro-texto);
+  font-size: 18px;
+}
+.sucursales .suc-sec3 .fondo-rosa .prod.oficinas-r:hover p .title-sucursal {
+  font-size: 18px;
+  color: var(--azul);
+  font-family: "NewJune-Bold", sans-serif;
+}
+.sucursales .suc-sec3 .fondo-rosa .prod.oficinas-r:hover p .tel-sucursal {
+  font-size: 18px;
+  color: var(--rosa);
+  font-family: "NewJune-Bold", sans-serif;
+}
+.sucursales .suc-sec3 .fondo-rosa .prod.oficinas-r:hover p .atencion {
+  font-size: 18px;
+  color: var(--rosa);
+  font-family: "NewJune-Bold", sans-serif;
+}
+.sucursales .suc-sec4 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/sucursales/Fondo_SeccionMapa.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 300px;
+  height: auto;
+  padding: 30px 0px;
+}
+.sucursales .suc-sec4 iframe {
+  margin: auto;
+  display: block;
+}
+
+@media (max-width: 767px) and (min-width: 0px) {
+  .sucursales .suc-sec1 {
+    /*min-height: 300px;
+    .titlesuc-sec1 {
+        font-size: 50px;
+    }*/
+    min-height: 150px;
+    margin-top: 70px;
+  }
+  .sucursales .suc-sec3 .fondo-blanco .prod .rose {
+    font-size: 40px;
+  }
+  .sucursales .suc-sec3 .fondo-rosa .prod .white {
+    font-size: 40px;
+  }
+  .sucursales .suc-sec4 iframe {
+    max-width: 100%;
+  }
+}
+/* Sucursales Section */
+.simulador {
+  /* FOOTER SECTION */
+}
+.simulador .sim-sec1 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/simulador/Banner_Principal.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  height: auto;
+}
+.simulador .sim-sec1 .titlesim-sec1 {
+  background: var(--rosa);
+  color: var(--blanco);
+  font-size: 80px;
+  margin-top: 150px;
+  padding: 0px 30px;
+  /*width: 45%;*/
+  display: inline-block;
+  font-family: "Bariol_Regular", sans-serif;
+  font-weight: 700;
+}
+.simulador .sim-sec2 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/simulador/Fondo_Bienvenido.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 300px;
+  height: auto;
+}
+.simulador .sim-sec2 .titlesim-sec2 {
+  text-align: center;
+  color: var(--rosa);
+  font-size: 45px;
+  font-weight: 700;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 50px;
+  display: block;
+}
+.simulador .sim-sec2 .green-line {
+  height: 5px;
+  width: 10%;
+  background: var(--verde);
+  margin: auto;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.simulador .sim-sec2 .titlesim-sec2a {
+  text-align: center;
+  color: var(--negro-texto);
+  font-size: 28px;
+  font-weight: 700;
+  font-family: "NewJune-Bold", sans-serif;
+}
+.simulador .sim-sec3 {
+  display: inline-block;
+  width: 100%;
+  min-height: 550px;
+  height: auto;
+  vertical-align: top;
+  background: var(--blanco);
+  padding: 50px 0px;
+}
+.simulador .sim-sec3 .form-simulador {
+  margin: auto;
+  display: block;
+}
+.simulador .sim-sec3 .form-simulador input {
+  width: 100%;
+  padding: 5px 10px;
+  border: 2px solid var(--verde);
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.simulador .sim-sec3 .form-simulador select {
+  width: 100%;
+  padding: 5px 10px;
+  border: 2px solid var(--verde);
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.simulador .sim-sec3 .form-simulador .btn-sim {
+  background: var(--rosa);
+  color: var(--blanco);
+  padding: 2px 50px;
+  font-size: 28px;
+  border-radius: 10px;
+  float: right;
+  border: none;
+  font-family: "NewJune-Medium-Italic", sans-serif;
+}
+.simulador .sim-sec3 .form-simulador ::-webkit-input-placeholder {
+  color: var(--negro-texto);
+  font-size: 18px;
+}
+.simulador .sim-sec3 .form-simulador ::-moz-placeholder {
+  color: var(--negro-texto);
+  font-size: 18px;
+}
+.simulador .sim-sec3 .form-simulador :-ms-input-placeholder {
+  color: var(--negro-texto);
+  font-size: 18px;
+}
+.simulador .sim-sec3 .form-simulador ::-ms-input-placeholder {
+  color: var(--negro-texto);
+  font-size: 18px;
+}
+.simulador .sim-sec3 .form-simulador ::placeholder {
+  color: var(--negro-texto);
+  font-size: 18px;
+}
+.simulador .sim-sec4 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/simulador/Fondo_BannerTyC.jpg) center center no-repeat;
+  background-size: cover;
+  padding: 60px 0px;
+}
+.simulador .sim-sec4 .titlesim-sec4 {
+  color: var(--blanco);
+  font-size: 50px;
+  font-family: "NewJune-Bold", sans-serif;
+  text-align: center;
+}
+.simulador .sim-sec4 .termino {
+  background: var(--verde);
+  color: var(--blanco);
+  padding: 2px 80px;
+  font-size: 40px;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  font-family: "NewJune-Medium-Italic", sans-serif;
+  text-decoration: none;
+}
+.simulador .f-sec1 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/Img_Fondo_Footer.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 450px;
+  height: auto;
+  padding: 40px 0px;
+}
+.simulador .f-sec1 .title-footer {
+  font-size: 35px;
+  text-align: center;
+  color: var(--blanco);
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.simulador .f-sec1 .green-line {
+  background: var(--verde);
+  height: 5px;
+  width: 7%;
+  margin: auto;
+  display: block;
+  margin-bottom: 50px;
+}
+.simulador .f-sec1 .text-form {
+  color: var(--negro-texto);
+  font-size: 22px;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-bottom: 50px;
+}
+.simulador .f-sec1 .text-form .parrafo-footer {
+  color: var(--negro-texto);
+  font-size: 24px;
+  font-family: "NewJune-Bold", sans-serif;
+}
+.simulador .f-sec1 .text-form .tel-footer {
+  color: var(--blanco);
+  text-decoration: none;
+}
+.simulador .f-sec1 .redes {
+  color: var(--blanco);
+  font-size: 24px;
+  font-family: "NewJune-Bold", sans-serif;
+  float: left;
+}
+.simulador .f-sec1 .redes ul {
+  display: inline-block;
+  list-style: none;
+  padding: 15px 0px;
+  margin: 0px;
+}
+.simulador .f-sec1 .redes ul li {
+  display: inline-block;
+}
+.simulador .f-sec1 .redes ul li .link-red {
+  display: block;
+  width: 100%;
+  max-width: 60px;
+  margin: 0 7px;
+}
+.simulador .f-sec1 .form-footer {
+  background: var(--rosa);
+  padding: 20px;
+  min-height: 400px;
+  height: auto;
+}
+.simulador .f-sec1 .form-footer .title-form {
+  color: var(--blanco);
+  font-family: "NewJune-Medium-Italic", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.simulador .f-sec1 .form-footer label {
+  width: 100%;
+  color: var(--blanco);
+  font-size: 14px;
+}
+.simulador .f-sec1 .form-footer input {
+  width: 100%;
+  color: var(--negro-texto);
+  border: none;
+}
+.simulador .f-sec1 .form-footer textarea {
+  width: 100%;
+  color: var(--negro-texto);
+  border: none;
+}
+.simulador .f-sec1 .form-footer button {
+  background: var(--verde);
+  color: var(--blanco);
+  font-size: 14px;
+  border: none;
+  float: right;
+  padding: 5px 50px;
+  margin-top: 10px;
+  font-family: "NewJune-Medium-Italic", sans-serif;
+  font-weight: 700;
+}
+.simulador .f-sec1 .copy {
+  text-align: center;
+  font-size: 12px;
+  color: var(--negro-texto);
+  margin-top: 50px;
+}
+.simulador .f-sec2 {
+  display: inline-block;
+  width: 100%;
+  min-height: 100px;
+  height: auto;
+  vertical-align: top;
+  background: var(--azul);
+  padding: 30px 0px;
+}
+.simulador .f-sec2 .aliados {
+  display: block;
+  margin: auto;
+}
+.simulador .f-sec2 .aliados .aliado {
+  width: calc((100% - 40px) / 5);
+  display: inline-block;
+}
+.simulador .f-sec2 .aliados .aliado .img-aliado1 {
+  margin: auto;
+  display: block;
+  margin-top: -40px;
+}
+.simulador .f-sec2 .aliados .aliado .img-aliado {
+  margin: auto;
+  display: block;
+}
+.simulador .f-sec3 {
+  display: inline-block;
+  width: 100%;
+  min-height: 50px;
+  height: auto;
+  vertical-align: top;
+  background: var(--rosa);
+}
+.simulador .f-sec3 .derechos {
+  text-align: center;
+  color: var(--blanco);
+  font-size: 18px;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 10px;
+}
+.simulador .f-sec4 {
+  display: inline-block;
+  width: 100%;
+  min-height: 200px;
+  height: auto;
+  vertical-align: top;
+  background: var(--blanco);
+  padding: 20px 0px;
+}
+.simulador .f-sec4 .titlecuatro {
+  color: var(--negro-texto);
+  font-size: 18px;
+  text-align: center;
+}
+.simulador .f-sec4 .titlecuatro .sofom {
+  color: var(--azul);
+  font-size: 18px;
+  text-align: center;
+  font-family: "NewJune-Bold", sans-serif;
+}
+.simulador .f-sec4 .valor {
+  color: var(--negro-texto);
+  font-size: 16px;
+  text-align: center;
+  margin: 2% 0;
+}
+.simulador .f-sec4 .cat {
+  color: var(--negro-texto);
+  font-size: 10px;
+  text-align: center;
+}
+.simulador .f-sec4 .cat .cat-prom {
+  color: var(--negro-texto);
+  font-family: "NewJune-Bold", sans-serif;
+}
+
+@media (max-width: 767px) and (min-width: 0px) {
+  .simulador .sim-sec4 .termino {
+    margin: auto;
+    display: block;
+    text-align: center;
+    width: 70%;
+  }
+  .simulador .f-sec2 .aliados .aliado {
+    width: calc((100% - 40px) / 2);
+  }
+}
+@media (max-width: 569px) and (min-width: 480px) {
+  .simulador .sim-sec4 .termino {
+    margin: auto;
+    display: block;
+    text-align: center;
+    width: 80%;
+  }
+  .simulador .f-sec2 .aliados .aliado {
+    width: calc((100% - 40px) / 2);
+  }
+}
+@media (max-width: 479px) and (min-width: 0px) {
+  .simulador .sim-sec1 .titlesim-sec1 {
+    font-size: 50px;
+  }
+  .simulador .sim-sec4 .termino {
+    margin: auto;
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+  .simulador .f-sec2 .aliados .aliado {
+    width: calc((100% - 40px) / 2);
+  }
+}
+/* Nuestro Equipo Section */
+.equipo .equipo-sec1 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/nuestro-equipo/Banner_Principal.jpg) center center no-repeat;
+  background-size: cover;
+  /*min-height: 500px;
+  height: auto;*/
+  padding: 14% 0;
+}
+.equipo .equipo-sec1 h1 {
+  text-transform: uppercase;
+  /*margin-top: 150px;*/
+  display: contents;
+}
+.equipo .equipo-sec1 h1 .titlesim-sec1 {
+  background: var(--rosa);
+  color: var(--blanco);
+  /*font-size: 80px;*/
+  /*margin-top: 150px;*/
+  padding: 12px 20px;
+  width: 45%;
+  /*font-family: 'Bariol_Regular', sans-serif;*/
+  font-weight: 700;
+}
+.equipo .equipo-sec2 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/nuestro-equipo/Fondo_EnFinancieraMEXI.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 300px;
+  height: auto;
+}
+.equipo .equipo-sec2 .titlesnuestro-sec2 {
+  text-align: center;
+  color: var(--azul);
+  /*font-size: 35px;*/
+  font-weight: 700;
+  /*font-family: 'NewJune-Bold', sans-serif;*/
+  margin-top: 50px;
+  display: block;
+}
+.equipo .equipo-sec2 .green-line {
+  height: 5px;
+  width: 10%;
+  background: var(--verde);
+  margin: auto;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.equipo .equipo-sec2 .titlenuestro-sec2a {
+  text-align: center;
+  color: var(--negro-texto);
+  /*font-size: 30px;*/
+  font-weight: 700;
+  /*font-family: 'NewJune-Bold', sans-serif;*/
+}
+.equipo .equipo-sec2 .titlenuestro-sec2a .recursos {
+  color: var(--rosa);
+  text-decoration: none;
+}
+.equipo .equipo-sec3 {
+  display: inline-block;
+  width: 100%;
+  min-height: 500px;
+  height: auto;
+  vertical-align: top;
+  background: var(--blanco);
+  padding: 50px 0px;
+}
+.equipo .equipo-sec3 .vacantes {
+  width: 60%;
+  margin: auto;
+  display: block;
+}
+.equipo .equipo-sec3 .vacantes .titlesnuestro-sec3 {
+  color: var(--azul);
+  /*font-size: 35px;*/
+  font-weight: 700;
+  font-family: "NewJune-Bold", sans-serif;
+  display: block;
+  margin-bottom: 30px;
+}
+.equipo .equipo-sec3 .vacantes .panel-group {
+  border: 2px solid var(--verde);
+  margin-bottom: 30px;
+  background: var(--blanco);
+}
+.equipo .equipo-sec3 .vacantes .panel-group .panel-title {
+  color: var(--negro-texto);
+  font-size: 18px;
+}
+.equipo .equipo-sec3 .vacantes .panel-group .fas {
+  color: var(--rosa);
+  font-size: 25px;
+}
+.equipo .equipo-sec3 .vacantes .panel-collapse .panel-body .desc-vacante {
+  margin-bottom: 20px;
+}
+.equipo .equipo-sec3 .vacantes .panel-collapse .panel-body .desc-vacante .title-vacante {
+  color: var(--negro-texto);
+  font-family: "NewJune-Bold", sans-serif;
+  font-size: 14px;
+}
+.equipo .equipo-sec3 .vacantes .panel-collapse .panel-body .desc-vacante .list-vacante {
+  color: var(--rosa);
+  line-height: 2px;
+}
+.equipo .equipo-sec3 .vacantes .panel-collapse .panel-body .desc-vacante .list-vacante .text-vacante {
+  color: var(--negro-texto);
+  font-size: 12px;
+}
+.equipo .equipo-sec4 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/nuestro-equipo/Fondo_FormularioI.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  height: auto;
+  padding: 50px 0px;
+}
+.equipo .equipo-sec4 .form-equipo {
+  margin-top: 30px;
+}
+.equipo .equipo-sec4 .form-equipo input {
+  width: 100%;
+  color: var(--blanco);
+  font-size: 16px;
+  padding: 10px 15px;
+  border: 2px solid var(--blanco);
+  background: transparent;
+  margin-bottom: 30px;
+}
+.equipo .equipo-sec4 .form-equipo ::-webkit-input-placeholder {
+  color: var(--blanco);
+  font-size: 20px;
+}
+.equipo .equipo-sec4 .form-equipo ::-moz-placeholder {
+  color: var(--blanco);
+  font-size: 20px;
+}
+.equipo .equipo-sec4 .form-equipo :-ms-input-placeholder {
+  color: var(--blanco);
+  font-size: 20px;
+}
+.equipo .equipo-sec4 .form-equipo ::-ms-input-placeholder {
+  color: var(--blanco);
+  font-size: 20px;
+}
+.equipo .equipo-sec4 .form-equipo ::placeholder {
+  color: var(--blanco);
+  font-size: 20px;
+}
+.equipo .equipo-sec4 .form-equipo .adjunta {
+  color: var(--blanco);
+  font-size: 18px;
+}
+.equipo .equipo-sec4 .form-equipo .cv {
+  border: none;
+  background: var(--azul);
+  color: var(--blanco);
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.equipo .equipo-sec4 .form-equipo .btn-cv {
+  border: none;
+  background: var(--verde);
+  color: var(--blanco);
+  font-size: 25px;
+  padding: 1px 50px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-family: "NewJune-Medium-Italic", sans-serif;
+  float: right;
+}
+.equipo .equipo-sec5 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: var(--verde);
+  padding: 50px 0px;
+}
+.equipo .equipo-sec5 .titlesnuestro-sec5 {
+  color: var(--blanco);
+  /*font-size: 30px;*/
+  text-align: center;
+  font-family: "NewJune-Bold", sans-serif;
+}
+.equipo .equipo-sec5 .titlesnuestro-sec5 .rose-text {
+  color: var(--rosa);
+  font-size: 28px;
+}
+.equipo .equipo-sec5 .rose-line {
+  height: 5px;
+  margin: auto;
+  display: block;
+  width: 10%;
+  background: var(--rosa);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.equipo .equipo-sec5 .titlesnuestro-sec5 {
+  color: var(--blanco);
+  /*font-size: 22px;*/
+  text-align: center;
+}
+.equipo .equipo-sec5 .titlesnuestro-sec5 .tel-nuestro {
+  color: var(--rosa);
+  font-size: 20px;
+}
+
+@media (max-width: 767px) and (min-width: 0px) {
+  .equipo .equipo-sec1 {
+    min-height: 300px;
+  }
+  .equipo .equipo-sec1 h1 {
+    margin-top: 50px;
+  }
+  .equipo .equipo-sec1 h1 .titlesim-sec1 {
+    padding-top: 15px;
+    /*font-size: 50px;*/
+  }
+  .equipo .equipo-sec2 {
+    min-height: 450px;
+  }
+  .equipo .equipo-sec2 .titlenuestro-sec2a .recursos {
+    font-size: 18px;
+  }
+  .equipo .equipo-sec3 {
+    padding: 50px 20px;
+  }
+  .equipo .equipo-sec3 .vacantes {
+    width: 100%;
+  }
+  .equipo .equipo-sec3 .vacantes .panel-collapse .panel-body .desc-vacante .list-vacante {
+    line-height: 13px;
+  }
+  .equipo .equipo-sec4 .form-equipo .btn-cv {
+    float: left;
+    margin-top: 20px;
+  }
+}
+/*@media (max-width: 569px) and (min-width: 480px) {
+    .equipo {
+        .equipo-sec1 h1 .titlesim-sec1 {
+            padding-top: 15px;
+            font-size: 50px;
+        } 
+        .equipo-sec2 {
+            min-height: 450px;
+            .titlenuestro-sec2a .recursos {
+                font-size: 20px;
+            }
+        }
+        .equipo-sec3 {
+            padding: 50px 20px;
+            .vacantes {
+                width: 100%;
+                .panel-collapse .panel-body .desc-vacante .list-vacante {
+                    line-height: 13px;
+                }
+            }
+        }
+        .equipo-sec4 .form-equipo .btn-cv {
+            float: left;
+            margin-top: 20px;
+        }
+    }   
+}       
+
+@media (max-width: 479px) and (min-width: 0px) {
+    .equipo {
+        .equipo-sec1 {
+            min-height: 300px;
+            h1 {
+                .titlesim-sec1 {
+                    padding-top: 15px;
+                    font-size: 50px;
+                }    
+            }
+        } 
+        .equipo-sec2 {
+            min-height: 450px;
+            .titlenuestro-sec2a .recursos {
+                font-size: 18px;
+            }
+        }
+        .equipo-sec3 {
+            padding: 50px 20px;
+            .vacantes {
+                width: 100%;
+                .panel-collapse .panel-body .desc-vacante .list-vacante {
+                    line-height: 13px;
+                }
+            } 
+        } 
+        .equipo-sec4 .form-equipo .btn-cv {
+            float: left;
+            margin-top: 20px;
+        } 
+    }   
+}*/
+/* Blog Section */
+.blog .blog-sec1 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/blog/Banner_Principal.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  height: auto;
+}
+.blog .blog-sec1 .titlesuc-sec1 {
+  background: var(--rosa);
+  color: var(--blanco);
+  font-size: 80px;
+  margin-top: 150px;
+  padding: 5px 150px;
+  font-family: "Bariol_Regular", sans-serif;
+  font-weight: 700;
+  display: inline-block;
+}
+.blog .blog-sec2 {
+  width: 100%;
+}
+.blog .blog-sec2 .nota1 {
+  display: inline-block;
+  min-height: 300px;
+  height: auto;
+  /*width: 50%;*/
+  vertical-align: top;
+  background: url(../img/blog/Img_Nota1.jpg) center center no-repeat;
+  background-size: cover;
+}
+.blog .blog-sec2 .nota1 .title-nota {
+  color: var(--blanco);
+  font-size: 30px;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 60px;
+  width: 60%;
+  display: block;
+  padding: 0px 25px;
+}
+.blog .blog-sec2 .nota1 .title-nota .btn-nota {
+  color: var(--blanco);
+  font-size: 18px;
+  font-family: "NewJune-Medium-Italic", sans-serif;
+  text-decoration: none;
+  border: none;
+  background: var(--verde);
+  padding: 5px 50px;
+  margin-top: 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+.blog .blog-sec2 .nota2 {
+  display: inline-block;
+  min-height: 300px;
+  height: auto;
+  /*width: 50%;*/
+  vertical-align: top;
+  background: url(../img/blog/Img_Nota2.jpg) center center no-repeat;
+  background-size: cover;
+}
+.blog .blog-sec2 .nota2 .title-nota {
+  color: var(--blanco);
+  font-size: 30px;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 60px;
+  width: 60%;
+  display: block;
+  padding: 0px 25px;
+}
+.blog .blog-sec2 .nota2 .title-nota .btn-nota {
+  color: var(--blanco);
+  font-size: 18px;
+  font-family: "NewJune-Medium-Italic", sans-serif;
+  text-decoration: none;
+  border: none;
+  background: var(--verde);
+  padding: 5px 50px;
+  margin-top: 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+.blog .blog-sec2 .nota3 {
+  display: inline-block;
+  min-height: 300px;
+  height: auto;
+  /*width: 50%;*/
+  vertical-align: top;
+  background: url(../img/blog/Img_Nota3.jpg) center center no-repeat;
+  background-size: cover;
+}
+.blog .blog-sec2 .nota3 .title-nota {
+  color: var(--blanco);
+  font-size: 30px;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 60px;
+  width: 60%;
+  display: block;
+  padding: 0px 25px;
+}
+.blog .blog-sec2 .nota3 .title-nota .btn-nota {
+  color: var(--blanco);
+  font-size: 18px;
+  font-family: "NewJune-Medium-Italic", sans-serif;
+  text-decoration: none;
+  border: none;
+  background: var(--verde);
+  padding: 5px 50px;
+  margin-top: 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+.blog .blog-sec2 .nota4 {
+  display: inline-block;
+  min-height: 300px;
+  height: auto;
+  /*width: 50%;*/
+  vertical-align: top;
+  background: url(../img/blog/Img_Nota4.jpg) center center no-repeat;
+  background-size: cover;
+}
+.blog .blog-sec2 .nota4 .title-nota {
+  color: var(--blanco);
+  font-size: 30px;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 60px;
+  width: 60%;
+  display: block;
+  padding: 0px 25px;
+}
+.blog .blog-sec2 .nota4 .title-nota .btn-nota {
+  color: var(--blanco);
+  font-size: 18px;
+  font-family: "NewJune-Medium-Italic", sans-serif;
+  text-decoration: none;
+  border: none;
+  background: var(--verde);
+  padding: 5px 50px;
+  margin-top: 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+@media (max-width: 767px) and (min-width: 570px) {
+  .blog .blog-sec2 .nota1 .title-nota {
+    width: 100%;
+  }
+  .blog .blog-sec2 .nota2 .title-nota {
+    width: 100%;
+  }
+  .blog .blog-sec2 .nota3 .title-nota {
+    width: 100%;
+  }
+  .blog .blog-sec2 .nota4 .title-nota {
+    width: 100%;
+  }
+}
+@media (max-width: 569px) and (min-width: 480px) {
+  .blog .blog-sec2 .nota1 .title-nota {
+    width: 100%;
+  }
+  .blog .blog-sec2 .nota2 .title-nota {
+    width: 100%;
+  }
+  .blog .blog-sec2 .nota3 .title-nota {
+    width: 100%;
+  }
+  .blog .blog-sec2 .nota4 .title-nota {
+    width: 100%;
+  }
+}
+@media (max-width: 479px) and (min-width: 0px) {
+  .blog .blog-sec1 .titlesuc-sec1 {
+    font-size: 50px;
+    padding: 5px 100px;
+  }
+  .blog .blog-sec2 .nota1 .title-nota {
+    width: 100%;
+  }
+  .blog .blog-sec2 .nota2 .title-nota {
+    width: 100%;
+  }
+  .blog .blog-sec2 .nota3 .title-nota {
+    width: 100%;
+  }
+  .blog .blog-sec2 .nota4 .title-nota {
+    width: 100%;
+  }
+}
+/* Mexi Tres Section */
+.mexi-tres {
+  /* FOOTER SECTION */
+}
+.mexi-tres .tres-sec1 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url("../img/creditos/mexi-tres/Banner_Principal.png") center center no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  height: auto;
+}
+.mexi-tres .tres-sec1 .tres-title1 {
+  background: var(--verde);
+  color: var(--blanco);
+  margin-top: 120px;
+  padding: 5px 40px;
+  display: inline-block;
+  font-family: "Bariol_Regular", sans-serif;
+  font-weight: 700;
+}
+.mexi-tres .tres-sec1 .tres-title1a {
+  background: var(--azul);
+  color: var(--blanco);
+  font-size: 80px;
+  padding: 5px 40px;
+  display: inline-block;
+  font-family: "Bariol_Regular", sans-serif;
+}
+.mexi-tres .tres-sec1 .cta-banner {
+  background: var(--rosa);
+  color: var(--blanco);
+  font-size: 20px;
+  font-family: "NewJune-Bold", sans-serif;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  border-radius: 0px;
+}
+.mexi-tres .tres-sec2 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-tres/Fondo_Prestamosparajubilados.jpg) center center no-repeat;
+  background-size: cover;
+  padding: 80px 0px;
+}
+.mexi-tres .tres-sec2 .img-mexitres {
+  margin: auto;
+  display: block;
+}
+.mexi-tres .tres-sec2 .tres-title2 {
+  color: var(--rosa);
+  font-size: 40px;
+  font-family: "NewJune-Bold", sans-serif;
+  border-left: 6px solid var(--verde);
+  padding: 0px 20px;
+  margin-top: 5%;
+}
+.mexi-tres .tres-sec2 .tres-title2 .contigo {
+  color: var(--negro-texto);
+  font-size: 30px;
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-tres .tres-sec2 .tres-title2 .activos {
+  background-color: var(--rosa);
+  width: 85%;
+  position: relative;
+  left: -2.5%;
+  border-radius: 0px 25px 25px 0px;
+}
+.mexi-tres .tres-sec2 .tres-title2 .activos p {
+  color: #fff;
+  font-size: 40px;
+  font-family: "NewJune-Bold", sans-serif;
+  padding-left: 3%;
+}
+.mexi-tres .tres-sec3 .jubilados {
+  display: inline-block;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-tres/Fondo_Yaseapara.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 551px;
+  height: auto;
+  padding: 50px;
+}
+.mexi-tres .tres-sec3 .jubilados .tres-title3 {
+  color: var(--blanco);
+  text-align: center;
+  font-size: 22px;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 50px;
+}
+.mexi-tres .tres-sec3 .jubilados .rose-line {
+  height: 6px;
+  background: var(--rosa);
+  width: 10%;
+  margin: auto;
+  display: block;
+  margin-top: 20px;
+}
+.mexi-tres .tres-sec3 .imagen1-tres {
+  display: inline-block;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-tres/Img_Yaseapara.png) center center no-repeat;
+  background-size: cover;
+  min-height: 551px;
+  height: auto;
+}
+.mexi-tres .tres-sec3 .bg-rosa {
+  padding: 35px;
+  font-size: 25px;
+}
+.mexi-tres .tres-sec4 .imagen2-tres {
+  display: inline-block;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-tres/Img_Obtendesde.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  height: auto;
+}
+.mexi-tres .tres-sec4 .obten {
+  display: inline-block;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-tres/Fondo_Obtendesde.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  height: auto;
+}
+.mexi-tres .tres-sec4 .obten .tres-title4 {
+  color: var(--blanco);
+  text-align: center;
+  font-size: 50px;
+  margin-top: 110px;
+}
+.mexi-tres .tres-sec4 .obten .tres-title4 .tresmil {
+  color: var(--verde);
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-tres .tres-sec4 .obten .tres-title4 .cienmil {
+  color: var(--amarillo);
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-tres .tres-sec5 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-tres/Fondo_Beneficios.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  height: auto;
+  padding: 50px 0px;
+}
+.mexi-tres .tres-sec5 .tres-title5 {
+  font-size: 35px;
+  text-align: center;
+  color: var(--rosa);
+  font-family: "NewJune-Bold", sans-serif;
+  margin-bottom: 20px;
+}
+.mexi-tres .tres-sec5 .rose-line {
+  background: var(--verde);
+  height: 5px;
+  width: 7%;
+  margin: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+.mexi-tres .tres-sec5 .tres-title5a {
+  color: var(--negro-texto);
+  font-family: "NewJune-Bold", sans-serif;
+  text-align: center;
+  font-size: 22px;
+}
+.mexi-tres .tres-sec5 .beneficio {
+  margin-top: 50px;
+}
+.mexi-tres .tres-sec5 .beneficio .img-benefit {
+  margin: auto;
+  display: block;
+}
+.mexi-tres .tres-sec5 .beneficio .title-benefit {
+  text-align: center;
+  color: var(--negro-texto);
+  font-size: 22px;
+  margin-top: 5%;
+  /*display: flex;
+  padding: 0px 25px;*/
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-tres .tres-sec6 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-tres/Banner_Masde15anos.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  height: auto;
+}
+.mexi-tres .tres-sec6 .tres-title6 {
+  font-size: 35px;
+  color: var(--blanco);
+  width: 50%;
+  margin-top: 150px;
+  display: block;
+  line-height: 40px;
+}
+.mexi-tres .tres-sec6 .tres-title6 .anios {
+  color: var(--rosa);
+  font-size: 50px;
+  font-weight: 900;
+  font-style: italic;
+  /*font-family: 'NewJune-Medium-Italic', sans-serif;*/
+  font-family: "NewJune-Bold", sans-serif;
+  text-transform: uppercase;
+}
+.mexi-tres .tres-sec7 .credit-list {
+  display: inline-block;
+  vertical-align: top;
+  background: var(--azul);
+  min-height: 450px;
+  height: auto;
+  padding: 0px 50px;
+}
+.mexi-tres .tres-sec7 .credit-list .tres-title7 {
+  color: var(--blanco);
+  font-size: 30px;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 120px;
+}
+.mexi-tres .tres-sec7 .credit-list .yellow-line {
+  height: 5px;
+  background: var(--amarillo);
+  width: 10%;
+  margin: 4% 0%;
+}
+.mexi-tres .tres-sec7 .credit-list li {
+  color: var(--blanco);
+  font-size: 16px;
+}
+.mexi-tres .tres-sec7 .imagen3-tres {
+  display: inline-block;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-tres/Img_Caracteristicas.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 450px;
+  height: auto;
+}
+.mexi-tres .tres-sec8 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-tres/Banner_Respuestaenmenos.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 450px;
+  height: auto;
+  padding: 50px 40px;
+}
+.mexi-tres .tres-sec8 .tres-title8 {
+  font-size: 22px;
+  color: var(--blanco);
+  width: 80%;
+  margin-top: 100px;
+}
+.mexi-tres .tres-sec8 .tres-title8 .horas {
+  text-transform: uppercase;
+  font-size: 40px;
+  color: var(--blanco);
+  font-family: "NewJune-Bold", sans-serif;
+  margin-bottom: 20px;
+  display: block;
+  line-height: 40px;
+}
+.mexi-tres .tres-sec9 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-tres/Fondo_Requisitos.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 600px;
+  height: auto;
+  padding: 50px 0px;
+  border-bottom: 10px solid var(--amarillo);
+}
+.mexi-tres .tres-sec9 .tres-title9 {
+  text-align: center;
+  color: var(--blanco);
+  font-size: 35px;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-bottom: 40px;
+}
+.mexi-tres .tres-sec9 .yellow-line {
+  background: var(--amarillo);
+  height: 5px;
+  width: 10%;
+  margin: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+.mexi-tres .tres-sec9 .requisitos ul li {
+  list-style-image: url(../img/creditos/mexi-tres/Icon-Check_Small.png);
+  color: var(--blanco);
+  font-size: 16px;
+}
+.mexi-tres .tres-sec10 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-tres/Fondo_Cobertura.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 600px;
+  height: auto;
+  padding: 50px 0px;
+}
+.mexi-tres .tres-sec10 .tres-title8 {
+  color: var(--blanco);
+  font-size: 35px;
+  font-family: "NewJune-Bold", sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.mexi-tres .tres-sec10 .tres-title8 .estados {
+  color: var(--amarillo);
+}
+.mexi-tres .tres-sec10 .yellow-line {
+  background: var(--amarillo);
+  height: 5px;
+  width: 7%;
+  margin: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+.mexi-tres .tres-sec10 .sectionmap {
+  margin-top: 50px;
+}
+.mexi-tres .tres-sec10 .sectionmap .map21 {
+  margin-top: -50px;
+}
+.mexi-tres .tres-sec10 .sectionmap .colibri {
+  float: right;
+  z-index: 999;
+  position: relative;
+  margin-bottom: -50px;
+}
+.mexi-tres .tres-sec10 .sectionmap .img-cobertura {
+  z-index: 999;
+  position: relative;
+  margin-top: -150px;
+  margin-left: -80px;
+}
+.mexi-tres .tres-sec10 .sectionmap .list-cob {
+  color: var(--amarillo);
+}
+.mexi-tres .tres-sec10 .sectionmap .list-cob .text-cob {
+  color: var(--blanco);
+}
+.mexi-tres .tres-sec15 {
+  display: inline-block;
+  width: 100%;
+  min-height: 500px;
+  height: auto;
+  vertical-align: top;
+  background: var(--blanco);
+  padding: 50px 0px;
+}
+.mexi-tres .tres-sec15 .dudas {
+  margin-bottom: 20px;
+}
+.mexi-tres .tres-sec15 .faqs {
+  width: 70%;
+  margin: auto;
+  display: block;
+}
+.mexi-tres .tres-sec15 .faqs .panel-group {
+  border: 2px solid var(--verde);
+  margin-bottom: 30px;
+  background: var(--blanco);
+}
+.mexi-tres .tres-sec15 .faqs .panel-group .panel-title {
+  color: var(--negro-texto);
+  font-size: 18px;
+}
+.mexi-tres .tres-sec15 .faqs .panel-group .fas {
+  color: var(--rosa);
+  font-size: 25px;
+}
+.mexi-tres .tres-sec15 .faqs .panel-collapse .panel-body .desc-vacante {
+  margin-bottom: 20px;
+}
+.mexi-tres .tres-sec15 .faqs .panel-collapse .panel-body .desc-vacante .title-faqs {
+  color: var(--negro-texto);
+  font-family: "NewJune-Bold", sans-serif;
+  font-size: 14px;
+}
+.mexi-tres .tres-sec15 .faqs .panel-collapse .panel-body .desc-vacante .list-faqs {
+  color: var(--rosa);
+  line-height: 2px;
+}
+.mexi-tres .tres-sec15 .faqs .panel-collapse .panel-body .desc-vacante .list-faqs .text-vacante {
+  color: var(--negro-texto);
+  font-size: 12px;
+}
+.mexi-tres .f-sec1 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/Img_Fondo_Footer.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 450px;
+  height: auto;
+  padding: 40px 0px;
+}
+.mexi-tres .f-sec1 .title-footer {
+  font-size: 35px;
+  text-align: center;
+  color: var(--blanco);
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.mexi-tres .f-sec1 .green-line {
+  background: var(--verde);
+  height: 5px;
+  width: 7%;
+  margin: auto;
+  display: block;
+  margin-bottom: 50px;
+}
+.mexi-tres .f-sec1 .text-form {
+  color: var(--negro-texto);
+  font-size: 22px;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 30px;
+}
+.mexi-tres .f-sec1 .text-form .parrafo-footer {
+  color: var(--negro-texto);
+  font-size: 24px;
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-tres .f-sec1 .text-form .tel-footer {
+  color: var(--blanco);
+  text-decoration: none;
+}
+.mexi-tres .f-sec1 .redes {
+  color: var(--blanco);
+  font-size: 24px;
+  font-family: "NewJune-Bold", sans-serif;
+  float: left;
+  display: contents;
+}
+.mexi-tres .f-sec1 .redes ul {
+  display: inline-block;
+  list-style: none;
+  padding: 15px 0px;
+  margin: 0px;
+}
+.mexi-tres .f-sec1 .redes ul li {
+  display: inline-block;
+}
+.mexi-tres .f-sec1 .redes ul li .link-red {
+  display: block;
+  width: 100%;
+  max-width: 60px;
+  margin: 0 7px;
+}
+.mexi-tres .f-sec1 .form-footer {
+  background: var(--rosa);
+  padding: 20px;
+  min-height: 460px;
+  height: auto;
+}
+.mexi-tres .f-sec1 .form-footer .title-form {
+  color: var(--blanco);
+  font-family: "NewJune-Medium-Italic", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.mexi-tres .f-sec1 .form-footer label {
+  width: 100%;
+  color: var(--blanco);
+  font-size: 14px;
+}
+.mexi-tres .f-sec1 .form-footer input {
+  width: 100%;
+  color: var(--negro-texto);
+  border: none;
+}
+.mexi-tres .f-sec1 .form-footer textarea {
+  width: 100%;
+  color: var(--negro-texto);
+  border: none;
+}
+.mexi-tres .f-sec1 .form-footer button {
+  background: var(--verde);
+  color: var(--blanco);
+  font-size: 14px;
+  border: none;
+  float: right;
+  padding: 5px 50px;
+  margin-top: 10px;
+  font-family: "NewJune-Medium-Italic", sans-serif;
+  font-weight: 700;
+}
+.mexi-tres .f-sec1 .copy {
+  text-align: center;
+  font-size: 12px;
+  color: var(--negro-texto);
+  margin-top: 50px;
+}
+.mexi-tres .f-sec1 .copy .link-fut {
+  color: var(--negro-texto);
+}
+.mexi-tres .f-sec2 {
+  display: inline-block;
+  width: 100%;
+  min-height: 100px;
+  height: auto;
+  vertical-align: top;
+  background: var(--azul);
+  padding: 30px 0px;
+}
+.mexi-tres .f-sec2 .aliados {
+  display: block;
+  margin: auto;
+}
+.mexi-tres .f-sec2 .aliados .aliado {
+  width: calc((100% - 40px) / 5);
+  display: inline-block;
+}
+.mexi-tres .f-sec2 .aliados .aliado .img-aliado1 {
+  margin: auto;
+  display: block;
+  margin-top: -40px;
+  max-width: 100%;
+}
+.mexi-tres .f-sec2 .aliados .aliado .img-aliado {
+  margin: auto;
+  display: block;
+  max-width: 100%;
+}
+.mexi-tres .f-sec3 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: var(--rosa);
+  text-align: center;
+  padding: 20px 0px;
+}
+.mexi-tres .f-sec3 .derechos {
+  display: inline-block;
+}
+.mexi-tres .f-sec3 .derechos .avi {
+  list-style: none;
+  color: var(--blanco);
+  border-right: 2px solid var(--blanco);
+  min-height: 50px;
+  padding: 0px 30px;
+}
+.mexi-tres .f-sec3 .derechos .avi a {
+  font-size: 16px;
+  font-family: "NewJune-Bold", sans-serif;
+  color: var(--blanco);
+}
+.mexi-tres .f-sec3 .derechos .avi2 {
+  list-style: none;
+  color: var(--blanco);
+  min-height: 50px;
+  padding: 0px 30px;
+}
+.mexi-tres .f-sec3 .derechos .avi2 a {
+  font-size: 16px;
+  font-family: "NewJune-Bold", sans-serif;
+  color: var(--blanco);
+}
+.mexi-tres .f-sec4 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: var(--blanco);
+  padding: 30px 0px;
+  /*.comisiones {
+  	margin-top: 30px;
+  	.comision {
+  		width: calc((100% - 20px) / 5);
+          display: inline-table;
+  		.partop {
+  			font-size: 12px;
+  			background: var(--azul);
+  			color: var(--blanco);
+  			text-align: center;
+  			font-family: 'NewJune-Bold', sans-serif;
+  			padding: 5px 0px;
+  		}
+  		.partbottom {
+              font-size: 12px;
+              background: #f2f2f2;
+              color: var(--negro-texto);
+              text-align: center;
+              font-family: 'NewJune-Bold', sans-serif;
+              padding: 5px 0px;
+              display: block;
+              min-height: 50px;
+              height: auto;
+          }
+  	}
+  }*/
+}
+.mexi-tres .f-sec4 .titlecuatro {
+  color: var(--negro-texto);
+  font-size: 18px;
+  text-align: center;
+}
+.mexi-tres .f-sec4 .titlecuatro .sofom {
+  color: var(--azul);
+  font-size: 18px;
+  text-align: center;
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-tres .f-sec4 .valor {
+  color: var(--negro-texto);
+  font-size: 16px;
+  text-align: center;
+  margin: 2% 0;
+}
+.mexi-tres .f-sec4 .cat {
+  color: var(--negro-texto);
+  font-size: 10px;
+  text-align: center;
+}
+.mexi-tres .f-sec4 .cat .cat-prom {
+  color: var(--negro-texto);
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-tres .politicas {
+  display: inline-block;
+  width: 100%;
+  padding: 20px 0px;
+  vertical-align: top;
+  background: var(--blanco);
+}
+.mexi-tres .politicas p {
+  font-size: 10px;
+  color: var(--negro);
+  text-align: center;
+}
+.mexi-tres .f-sec5 {
+  display: inline-block;
+  width: 100%;
+  padding: 20px 0px;
+  vertical-align: top;
+  background: #e6e6e6;
+}
+.mexi-tres .f-sec5 .copy {
+  text-align: center;
+  font-size: 12px;
+  color: var(--negro);
+}
+.mexi-tres .f-sec5 .copy .link-fut {
+  color: var(--negro);
+}
+
+@media (max-width: 767px) and (min-width: 0px) {
+  .mexi-tres .tres-sec1 {
+    min-height: 300px;
+  }
+  .mexi-tres .tres-sec1 .tres-title1 {
+    font-size: 50px;
+    margin-top: 50px;
+  }
+  .mexi-tres .tres-sec2 .tres-title2 {
+    font-size: 28px;
+    padding: 0px 0px 0 20px;
+  }
+  .mexi-tres .tres-sec3 .jubilados {
+    padding: 20px;
+  }
+  .mexi-tres .tres-sec4 .obten .tres-title4 {
+    margin-top: 50px;
+  }
+  .mexi-tres .tres-sec5 .beneficios .beneficio {
+    width: calc((100% - 20px) / 2);
+  }
+  .mexi-tres .tres-sec6 .tres-title6 {
+    width: 100%;
+    margin-top: 100px;
+    line-height: 50px;
+  }
+  .mexi-tres .tres-sec7 .credit-list {
+    padding: 0px 20px;
+  }
+  .mexi-tres .tres-sec7 .credit-list .tres-title7 {
+    margin-top: 100px;
+  }
+  .mexi-tres .tres-sec10 .container {
+    padding: 0;
+  }
+  .mexi-tres .tres-sec10 ul {
+    padding-left: 10px;
+  }
+  .mexi-tres .tres-sec8 .tres-title8 {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .mexi-tres .f-sec2 .aliados .aliado {
+    width: calc((100% - 20px) / 2);
+    padding: 15px;
+  }
+  .mexi-tres .f-sec3 .derechos .avi {
+    border-right: none;
+    margin-bottom: 15px;
+  }
+  .mexi-tres .f-sec4 .comisiones .comision {
+    width: calc((100% - 20px) / 2);
+  }
+}
+/* Mexi DXN Section */
+.mexi-dxn {
+  /* FOOTER SECTION */
+}
+.mexi-dxn .dxn-sec1 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-dxn/Banner-Mexi-DXN.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  height: auto;
+}
+.mexi-dxn .dxn-sec1 .dxn-title1 {
+  background: var(--verde);
+  color: var(--blanco);
+  font-size: 80px;
+  margin-top: 150px;
+  padding: 5px 40px;
+  display: inline-block;
+  font-family: "Bariol_Regular", sans-serif;
+  font-weight: 700;
+}
+.mexi-dxn .dxn-sec1 .cta-banner {
+  background: var(--rosa);
+  color: var(--blanco);
+  font-size: 20px;
+  font-family: "NewJune-Bold", sans-serif;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  border-radius: 0px;
+}
+.mexi-dxn .dxn-sec2 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-dxn/pleca-gris.jpg) center center no-repeat;
+  background-size: cover;
+  padding: 80px 0px;
+}
+.mexi-dxn .dxn-sec2 .img-mexidxn {
+  margin: auto;
+  display: block;
+}
+.mexi-dxn .dxn-sec2 .dxn-title2 {
+  color: var(--rosa);
+  font-size: 40px;
+  font-family: "NewJune-Bold", sans-serif;
+  border-left: 6px solid var(--verde);
+  padding: 0px 20px;
+  display: block;
+  line-height: 1;
+  margin-top: 3%;
+}
+.mexi-dxn .dxn-sec2 .dxn-title2 .contigo {
+  color: var(--negro-texto);
+  font-size: 30px;
+  font-family: "NewJune-Bold", sans-serif;
+  display: block;
+  margin-top: 20px;
+}
+.mexi-dxn .dxn-sec3 .snte {
+  display: inline-block;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-dxn/fondo-verde.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  height: auto;
+  padding: 50px;
+}
+.mexi-dxn .dxn-sec3 .snte .dxn-title3 {
+  color: var(--blanco);
+  text-align: center;
+  font-size: 22px;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 50px;
+}
+.mexi-dxn .dxn-sec3 .snte .rose-line {
+  height: 6px;
+  background: var(--rosa);
+  width: 10%;
+  margin: auto;
+  display: block;
+  margin-top: 20px;
+}
+.mexi-dxn .dxn-sec3 .imagen1-dxn {
+  display: inline-block;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-dxn/maestra.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  height: auto;
+}
+.mexi-dxn .dxn-sec4 .imagen2-dxn {
+  display: inline-block;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-dxn/doctor.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  height: auto;
+}
+.mexi-dxn .dxn-sec4 .obten {
+  display: inline-block;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-dxn/fondo-rosa.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  height: auto;
+}
+.mexi-dxn .dxn-sec4 .obten .dxn-title4 {
+  color: var(--blanco);
+  text-align: center;
+  font-size: 50px;
+  margin-top: 110px;
+}
+.mexi-dxn .dxn-sec4 .obten .dxn-title4 .tresmil {
+  color: var(--verde);
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-dxn .dxn-sec4 .obten .dxn-title4 .cienmil {
+  color: var(--amarillo);
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-dxn .dxn-sec5 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-dxn/fondo-gris.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  height: auto;
+  padding: 50px 0px;
+}
+.mexi-dxn .dxn-sec5 .dxn-title5 {
+  font-size: 35px;
+  text-align: center;
+  color: var(--rosa);
+  font-family: "NewJune-Bold", sans-serif;
+  margin-bottom: 20px;
+}
+.mexi-dxn .dxn-sec5 .green-line {
+  background: var(--verde);
+  height: 5px;
+  width: 10%;
+  margin: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+.mexi-dxn .dxn-sec5 .dxn-title5a {
+  color: var(--negro-texto);
+  font-family: "NewJune-Bold", sans-serif;
+  text-align: center;
+  font-size: 22px;
+}
+.mexi-dxn .dxn-sec5 .beneficio {
+  margin-top: 50px;
+}
+.mexi-dxn .dxn-sec5 .beneficio .img-benefit {
+  margin: auto;
+  display: block;
+}
+.mexi-dxn .dxn-sec5 .beneficio .title-benefit {
+  color: var(--negro-texto);
+  font-size: 28px;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 20px;
+  text-align: center;
+}
+.mexi-dxn .dxn-sec6 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-dxn/fondo-rosa2.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 600px;
+  height: auto;
+  padding: 30px 0px;
+}
+.mexi-dxn .dxn-sec6 .dxn-title6 {
+  text-align: center;
+  font-size: 22px;
+  color: var(--blanco);
+  font-family: "NewJune-Bold", sans-serif;
+  margin-bottom: 20px;
+}
+.mexi-dxn .dxn-sec6 .dxn-title6 .dxn1 {
+  color: var(--blanco);
+  font-size: 35px;
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-dxn .dxn-sec6 .dxn-title6 .dxn2 {
+  color: var(--amarillo);
+  font-size: 35px;
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-dxn .dxn-sec6 .yellow-line {
+  height: 5px;
+  width: 10%;
+  margin: auto;
+  display: block;
+  background: var(--amarillo);
+}
+.mexi-dxn .dxn-sec6 .map-suc {
+  margin: auto;
+  display: block;
+}
+.mexi-dxn .dxn-sec6 .sucursales-dxn ul li {
+  color: var(--amarillo);
+  margin-bottom: 20px;
+}
+.mexi-dxn .dxn-sec6 .sucursales-dxn ul li .text-sucmap {
+  color: var(--blanco);
+  font-size: 16px;
+}
+.mexi-dxn .dxn-sec6 .sucursales-dxn ul li .text-sucmap .title-sucmap {
+  font-size: 22px;
+}
+.mexi-dxn .dxn-sec7 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-dxn/banner-doctora.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  height: auto;
+}
+.mexi-dxn .dxn-sec7 .dxn-title7 {
+  font-size: 35px;
+  color: var(--blanco);
+  width: 50%;
+  margin-top: 150px;
+  display: block;
+  line-height: 40px;
+}
+.mexi-dxn .dxn-sec7 .dxn-title7 .contigo {
+  color: var(--rosa);
+  font-size: 50px;
+  font-weight: 900;
+  font-style: italic;
+  font-family: "NewJune-Bold", sans-serif;
+  text-transform: uppercase;
+}
+.mexi-dxn .dxn-sec8 {
+  display: inline-block;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-dxn/Banner-caracteristicas.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 450px;
+  height: auto;
+  width: 100%;
+}
+.mexi-dxn .dxn-sec8 .credit-list .dxn-title8 {
+  color: var(--blanco);
+  font-size: 30px;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 120px;
+}
+.mexi-dxn .dxn-sec8 .credit-list .yellow-line {
+  height: 5px;
+  background: var(--amarillo);
+  width: 10%;
+  margin: 4% 0%;
+}
+.mexi-dxn .dxn-sec8 .credit-list li {
+  color: var(--blanco);
+  font-size: 16px;
+}
+.mexi-dxn .dxn-sec9 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-dxn/Banner-credito-24-hrs.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 450px;
+  height: auto;
+  padding: 50px 40px;
+}
+.mexi-dxn .dxn-sec9 .dxn-title9 {
+  font-size: 22px;
+  color: var(--blanco);
+  width: 80%;
+  margin-top: 100px;
+}
+.mexi-dxn .dxn-sec9 .dxn-title9 .horas {
+  text-transform: uppercase;
+  font-size: 40px;
+  color: var(--blanco);
+  font-family: "NewJune-Bold", sans-serif;
+  margin-bottom: 20px;
+  display: block;
+  line-height: 40px;
+}
+.mexi-dxn .dxn-sec10 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-dxn/Banner-Azul.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 600px;
+  height: auto;
+  padding: 50px 0px;
+  border-bottom: 10px solid var(--amarillo);
+}
+.mexi-dxn .dxn-sec10 .dxn-title10 {
+  text-align: center;
+  color: var(--blanco);
+  font-size: 35px;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-bottom: 20px;
+}
+.mexi-dxn .dxn-sec10 .yellow-line {
+  background: var(--amarillo);
+  height: 5px;
+  width: 7%;
+  margin: auto;
+  display: block;
+  margin-bottom: 50px;
+}
+.mexi-dxn .dxn-sec10 .requisitos {
+  margin-left: 50px;
+}
+.mexi-dxn .dxn-sec10 .requisitos ul .list-req {
+  list-style-image: url(../img/creditos/mexi-nomina/Icon-Check_Small.png);
+  color: var(--blanco);
+  font-size: 16px;
+}
+.mexi-dxn .dxn-sec11 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-dxn/banner-tu-prestamo.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  height: auto;
+  padding: 50px 40px;
+}
+.mexi-dxn .dxn-sec11 .dxn-title11 {
+  font-size: 35px;
+  color: var(--blanco);
+  width: 90%;
+  margin-top: 50px;
+}
+.mexi-dxn .dxn-sec11 .dxn-title11 .realidad {
+  text-transform: uppercase;
+  font-size: 50px;
+  color: var(--rosa);
+  font-style: italic;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-bottom: 10px;
+  display: block;
+  line-height: 1;
+  font-weight: 900;
+}
+.mexi-dxn .dxn-sec12 {
+  display: inline-block;
+  width: 100%;
+  min-height: 500px;
+  height: auto;
+  vertical-align: top;
+  background: var(--blanco);
+  padding: 50px 0px;
+}
+.mexi-dxn .dxn-sec12 .dudas {
+  margin-bottom: 20px;
+}
+.mexi-dxn .dxn-sec12 .faqs {
+  width: 70%;
+  margin: auto;
+  display: block;
+}
+.mexi-dxn .dxn-sec12 .faqs .panel-group {
+  border: 2px solid var(--verde);
+  margin-bottom: 30px;
+  background: var(--blanco);
+}
+.mexi-dxn .dxn-sec12 .faqs .panel-group .panel-title {
+  color: var(--negro-texto);
+  font-size: 18px;
+}
+.mexi-dxn .dxn-sec12 .faqs .panel-group .fas {
+  color: var(--rosa);
+  font-size: 25px;
+}
+.mexi-dxn .dxn-sec12 .faqs .panel-collapse .panel-body .desc-vacante {
+  margin-bottom: 20px;
+}
+.mexi-dxn .dxn-sec12 .faqs .panel-collapse .panel-body .desc-vacante .title-faqs {
+  color: var(--negro-texto);
+  font-family: "NewJune-Bold", sans-serif;
+  font-size: 14px;
+}
+.mexi-dxn .dxn-sec12 .faqs .panel-collapse .panel-body .desc-vacante .list-faqs {
+  color: var(--rosa);
+  line-height: 2px;
+}
+.mexi-dxn .dxn-sec12 .faqs .panel-collapse .panel-body .desc-vacante .list-faqs .text-vacante {
+  color: var(--negro-texto);
+  font-size: 12px;
+}
+.mexi-dxn .f-sec1 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/Img_Fondo_Footer.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 450px;
+  height: auto;
+  padding: 40px 0px;
+}
+.mexi-dxn .f-sec1 .title-footer {
+  font-size: 35px;
+  text-align: center;
+  color: var(--blanco);
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.mexi-dxn .f-sec1 .green-line {
+  background: var(--verde);
+  height: 5px;
+  width: 7%;
+  margin: auto;
+  display: block;
+  margin-bottom: 50px;
+}
+.mexi-dxn .f-sec1 .text-form {
+  color: var(--negro-texto);
+  font-size: 22px;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 30px;
+}
+.mexi-dxn .f-sec1 .text-form .parrafo-footer {
+  color: var(--negro-texto);
+  font-size: 24px;
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-dxn .f-sec1 .text-form .tel-footer {
+  color: var(--blanco);
+  text-decoration: none;
+}
+.mexi-dxn .f-sec1 .redes {
+  color: var(--blanco);
+  font-size: 24px;
+  font-family: "NewJune-Bold", sans-serif;
+  float: left;
+  display: contents;
+}
+.mexi-dxn .f-sec1 .redes ul {
+  display: inline-block;
+  list-style: none;
+  padding: 15px 0px;
+  margin: 0px;
+}
+.mexi-dxn .f-sec1 .redes ul li {
+  display: inline-block;
+}
+.mexi-dxn .f-sec1 .redes ul li .link-red {
+  display: block;
+  width: 100%;
+  max-width: 60px;
+  margin: 0 7px;
+}
+.mexi-dxn .f-sec1 .form-footer {
+  background: var(--rosa);
+  padding: 20px;
+  min-height: 460px;
+  height: auto;
+}
+.mexi-dxn .f-sec1 .form-footer .title-form {
+  color: var(--blanco);
+  font-family: "NewJune-Medium-Italic", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.mexi-dxn .f-sec1 .form-footer label {
+  width: 100%;
+  color: var(--blanco);
+  font-size: 14px;
+}
+.mexi-dxn .f-sec1 .form-footer input {
+  width: 100%;
+  color: var(--negro-texto);
+  border: none;
+}
+.mexi-dxn .f-sec1 .form-footer textarea {
+  width: 100%;
+  color: var(--negro-texto);
+  border: none;
+}
+.mexi-dxn .f-sec1 .form-footer button {
+  background: var(--verde);
+  color: var(--blanco);
+  font-size: 14px;
+  border: none;
+  float: right;
+  padding: 5px 50px;
+  margin-top: 10px;
+  font-family: "NewJune-Medium-Italic", sans-serif;
+  font-weight: 700;
+}
+.mexi-dxn .f-sec1 .copy {
+  text-align: center;
+  font-size: 12px;
+  color: var(--negro-texto);
+  margin-top: 50px;
+}
+.mexi-dxn .f-sec1 .copy .link-fut {
+  color: var(--negro-texto);
+}
+.mexi-dxn .f-sec2 {
+  display: inline-block;
+  width: 100%;
+  min-height: 100px;
+  height: auto;
+  vertical-align: top;
+  background: var(--azul);
+  padding: 30px 0px;
+}
+.mexi-dxn .f-sec2 .aliados {
+  display: block;
+  margin: auto;
+}
+.mexi-dxn .f-sec2 .aliados .aliado {
+  width: calc((100% - 40px) / 5);
+  display: inline-block;
+}
+.mexi-dxn .f-sec2 .aliados .aliado .img-aliado1 {
+  margin: auto;
+  display: block;
+  margin-top: -40px;
+  max-width: 100%;
+}
+.mexi-dxn .f-sec2 .aliados .aliado .img-aliado {
+  margin: auto;
+  display: block;
+  max-width: 100%;
+}
+.mexi-dxn .f-sec3 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: var(--rosa);
+  text-align: center;
+  padding: 20px 0px;
+}
+.mexi-dxn .f-sec3 .derechos {
+  display: inline-block;
+}
+.mexi-dxn .f-sec3 .derechos .avi {
+  list-style: none;
+  color: var(--blanco);
+  border-right: 2px solid var(--blanco);
+  min-height: 50px;
+  padding: 0px 30px;
+}
+.mexi-dxn .f-sec3 .derechos .avi a {
+  font-size: 16px;
+  font-family: "NewJune-Bold", sans-serif;
+  color: var(--blanco);
+}
+.mexi-dxn .f-sec3 .derechos .avi2 {
+  list-style: none;
+  color: var(--blanco);
+  min-height: 50px;
+  padding: 0px 30px;
+}
+.mexi-dxn .f-sec3 .derechos .avi2 a {
+  font-size: 16px;
+  font-family: "NewJune-Bold", sans-serif;
+  color: var(--blanco);
+}
+.mexi-dxn .f-sec4 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: var(--blanco);
+  padding: 30px 0px;
+  /*.comisiones {
+      margin-top: 30px;
+      .comision {
+          width: calc((100% - 20px) / 5);
+          display: inline-table;
+          .partop {
+              font-size: 12px;
+              background: var(--azul);
+              color: var(--blanco);
+              text-align: center;
+              font-family: 'NewJune-Bold', sans-serif;
+              padding: 5px 0px;
+          }
+          .partbottom {
+              font-size: 12px;
+              background: #f2f2f2;
+              color: var(--negro-texto);
+              text-align: center;
+              font-family: 'NewJune-Bold', sans-serif;
+              padding: 5px 0px;
+              display: block;
+              min-height: 50px;
+              height: auto;
+          }
+      }
+  }*/
+}
+.mexi-dxn .f-sec4 .titlecuatro {
+  color: var(--negro-texto);
+  font-size: 18px;
+  text-align: center;
+}
+.mexi-dxn .f-sec4 .titlecuatro .sofom {
+  color: var(--azul);
+  font-size: 18px;
+  text-align: center;
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-dxn .f-sec4 .valor {
+  color: var(--negro-texto);
+  font-size: 16px;
+  text-align: center;
+  margin: 2% 0;
+}
+.mexi-dxn .f-sec4 .cat {
+  color: var(--negro-texto);
+  font-size: 10px;
+  text-align: center;
+}
+.mexi-dxn .f-sec4 .cat .cat-prom {
+  color: var(--negro-texto);
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-dxn .politicas {
+  display: inline-block;
+  width: 100%;
+  padding: 20px 0px;
+  vertical-align: top;
+  background: var(--blanco);
+}
+.mexi-dxn .politicas p {
+  font-size: 10px;
+  color: var(--negro);
+  text-align: center;
+}
+.mexi-dxn .f-sec5 {
+  display: inline-block;
+  width: 100%;
+  padding: 20px 0px;
+  vertical-align: top;
+  background: #e6e6e6;
+}
+.mexi-dxn .f-sec5 .copy {
+  text-align: center;
+  font-size: 12px;
+  color: var(--negro);
+}
+.mexi-dxn .f-sec5 .copy .link-fut {
+  color: var(--negro);
+}
+@media (max-width: 767px) and (min-width: 0px) {
+  .mexi-dxn .dxn-sec1 {
+    min-height: 300px;
+  }
+  .mexi-dxn .dxn-sec1 .dxn-title1 {
+    font-size: 50px;
+    margin-top: 100px;
+  }
+  .mexi-dxn .dxn-sec2 .dxn-title2 {
+    font-size: 30px;
+  }
+  .mexi-dxn .dxn-sec3 .snte {
+    padding: 20px;
+  }
+  .mexi-dxn .dxn-sec4 .obten .dxn-title4 {
+    margin-top: 50px;
+  }
+  .mexi-dxn .dxn-sec5 .beneficio .img-benefit {
+    width: 100%;
+  }
+  .mexi-dxn .dxn-sec5 .beneficio .title-benefit {
+    font-size: 20px;
+  }
+  .mexi-dxn .dxn-sec7 {
+    min-height: 200px;
+  }
+  .mexi-dxn .dxn-sec7 .dxn-title7 {
+    font-size: 35px;
+    width: 100%;
+    margin: 30px 0px;
+  }
+  .mexi-dxn .dxn-sec7 .dxn-title7 .contigo {
+    font-size: 30px;
+  }
+  .mexi-dxn .dxn-sec8 {
+    background: url(../img/creditos/mexi-dxn/Banner-caracteristicas.jpg);
+    background-position: left;
+  }
+  .mexi-dxn .dxn-sec8 .credit-list .dxn-title8 {
+    margin-top: 50px;
+  }
+  .mexi-dxn .dxn-sec9 {
+    background: url(../img/creditos/mexi-dxn/Banner-credito-24-hrs.jpg);
+    background-position: initial;
+    min-height: 0px;
+    padding: 30px 20px;
+  }
+  .mexi-dxn .dxn-sec9 .dxn-title9 {
+    width: 100%;
+    margin-top: 0px;
+  }
+  .mexi-dxn .dxn-sec10 .requisitos {
+    margin-left: 0px;
+  }
+  .mexi-dxn .dxn-sec10 .yellow-line {
+    width: 20%;
+  }
+  .mexi-dxn .dxn-sec11 {
+    min-height: 200px;
+    padding: 20px;
+  }
+  .mexi-dxn .dxn-sec11 .dxn-title11 {
+    font-size: 28px;
+    width: 100%;
+    margin-top: 0px;
+  }
+  .mexi-dxn .dxn-sec11 .dxn-title11 .realidad {
+    font-size: 28px;
+    display: inline-block;
+  }
+  .mexi-dxn .f-sec2 .aliados .aliado {
+    width: calc((100% - 20px) / 2);
+    padding: 15px;
+  }
+  .mexi-dxn .f-sec3 .derechos .avi {
+    border-right: none;
+    margin-bottom: 15px;
+  }
+  .mexi-dxn .f-sec4 .comisiones .comision {
+    width: calc((100% - 20px) / 2);
+    display: -ms-inline-grid;
+    display: inline-grid;
+  }
+  .mexi-dxn .f-sec4 .comisiones .comision .partbottom2 {
+    line-height: 19.5px;
+  }
+}
+
+/* Mexi Auto Section */
+.mexi-auto {
+  /* FOOTER SECTION */
+}
+.mexi-auto .auto-sec1 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-auto/Img_BannerPrincipal.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  height: auto;
+}
+.mexi-auto .auto-sec1 .auto1 {
+  float: right;
+}
+.mexi-auto .auto-sec1 .auto1 .auto-title1 {
+  background: var(--azul);
+  display: inline-block;
+  color: var(--blanco);
+  font-size: 80px;
+  margin-top: 150px;
+  padding: 5px 40px;
+  font-family: "Bariol_Regular", sans-serif;
+  font-weight: 700;
+}
+.mexi-auto .auto-sec1 .auto1 .cta-banner {
+  background: var(--rosa);
+  color: var(--blanco);
+  font-size: 20px;
+  font-family: "NewJune-Bold", sans-serif;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  border-radius: 0px;
+  float: right;
+}
+.mexi-auto .auto-sec2 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-auto/Fondo_PrestamossinBuro.jpg) center center no-repeat;
+  background-size: cover;
+  padding: 80px 0px;
+}
+.mexi-auto .auto-sec2 .img-mexiauto {
+  margin: auto;
+  display: block;
+}
+.mexi-auto .auto-sec2 .auto-title2 {
+  color: var(--rosa);
+  font-size: 50px;
+  font-family: "NewJune-Bold", sans-serif;
+  border-left: 6px solid var(--azul);
+  padding: 0px 20px;
+  margin-top: 5%;
+}
+.mexi-auto .auto-sec2 .auto-title2 .contigo {
+  color: var(--negro-texto);
+  font-size: 35px;
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-auto .auto-sec3 .vehiculo {
+  display: inline-block;
+  /*width: 50%;*/
+  vertical-align: top;
+  background: url(../img/creditos/mexi-auto/Fondo_MEXIAutoesuncredito.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 420px;
+  height: auto;
+  padding: 50px;
+}
+.mexi-auto .auto-sec3 .vehiculo .auto-title3 {
+  color: var(--blanco);
+  text-align: center;
+  font-size: 22px;
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-auto .auto-sec3 .vehiculo .rose-line {
+  height: 6px;
+  background: var(--rosa);
+  width: 10%;
+  margin: auto;
+  display: block;
+  margin-top: 20px;
+}
+.mexi-auto .auto-sec3 .imagen1-auto {
+  display: inline-block;
+  /*width: 50%;*/
+  vertical-align: top;
+  background: url(../img/creditos/mexi-auto/Img_MEXIAutoesuncredito.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 420px;
+  height: auto;
+}
+.mexi-auto .auto-sec4 .imagen2-auto {
+  display: inline-block;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-auto/Img_Obtendesde.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  height: auto;
+}
+.mexi-auto .auto-sec4 .obten {
+  display: inline-block;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-auto/Fondo_Obtendesde.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  height: auto;
+}
+.mexi-auto .auto-sec4 .obten .auto-title4 {
+  color: var(--blanco);
+  text-align: center;
+  font-size: 50px;
+  margin-top: 110px;
+}
+.mexi-auto .auto-sec4 .obten .auto-title4 .tresmil {
+  color: var(--verde);
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-auto .auto-sec4 .obten .auto-title4 .cienmil {
+  color: var(--amarillo);
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-auto .auto-sec5 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-auto/Fondo_Bemneficios.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  height: auto;
+  padding: 50px 0px;
+}
+.mexi-auto .auto-sec5 .auto-title5 {
+  font-size: 35px;
+  text-align: center;
+  color: var(--rosa);
+  font-family: "NewJune-Bold", sans-serif;
+  margin-bottom: 20px;
+}
+.mexi-auto .auto-sec5 .rose-line {
+  background: var(--verde);
+  height: 5px;
+  width: 7%;
+  margin: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+.mexi-auto .auto-sec5 .auto-title5a {
+  color: var(--negro-texto);
+  font-family: "NewJune-Bold", sans-serif;
+  text-align: center;
+  font-size: 22px;
+}
+.mexi-auto .auto-sec5 .beneficio {
+  display: inline-block;
+  margin-top: 50px;
+}
+.mexi-auto .auto-sec5 .beneficio .title-benefit {
+  color: var(--negro-texto);
+  font-size: 28px;
+  display: inline-block;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 40px;
+}
+.mexi-auto .auto-sec5 .beneficio .text-benefit {
+  color: var(--negro-texto);
+  font-size: 16px;
+  display: inline-block;
+}
+.mexi-auto .auto-sec6 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-auto/Banner_EnMEXItuburo.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  height: auto;
+}
+.mexi-auto .auto-sec6 .auto-title6 {
+  font-size: 25px;
+  color: var(--blanco);
+  width: 40%;
+  margin-top: 100px;
+  display: block;
+  line-height: 40px;
+}
+.mexi-auto .auto-sec6 .auto-title6 .anios {
+  color: var(--rosa);
+  font-size: 35px;
+  font-weight: 900;
+  font-style: italic;
+  font-family: "NewJune-Bold", sans-serif;
+  text-transform: uppercase;
+}
+.mexi-auto .auto-sec7 .credit-list {
+  display: inline-block;
+  /*width: 50%;*/
+  vertical-align: top;
+  background: var(--azul);
+  min-height: 450px;
+  height: auto;
+  padding: 0px 50px;
+}
+.mexi-auto .auto-sec7 .credit-list .auto-title7 {
+  color: var(--blanco);
+  font-size: 30px;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 120px;
+}
+.mexi-auto .auto-sec7 .credit-list .yellow-line {
+  height: 5px;
+  background: var(--amarillo);
+  width: 10%;
+  margin: 4% 0%;
+}
+.mexi-auto .auto-sec7 .credit-list li {
+  color: var(--blanco);
+  font-size: 16px;
+}
+.mexi-auto .auto-sec7 .imagen3-auto {
+  display: inline-block;
+  /*width: 50%;*/
+  vertical-align: top;
+  background: url(../img/creditos/mexi-auto/Img_Caracteristicas.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 450px;
+  height: auto;
+}
+.mexi-auto .auto-sec8 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-auto/Banner_Tuprestmoenmenos.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 450px;
+  height: auto;
+  padding: 50px 40px;
+}
+.mexi-auto .auto-sec8 .auto-title8 {
+  font-size: 22px;
+  color: var(--blanco);
+  width: 80%;
+  margin-top: 100px;
+}
+.mexi-auto .auto-sec8 .auto-title8 .horas {
+  text-transform: uppercase;
+  font-size: 40px;
+  color: var(--blanco);
+  font-family: "NewJune-Bold", sans-serif;
+  margin-bottom: 20px;
+  display: block;
+  line-height: 40px;
+}
+.mexi-auto .auto-sec9 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-auto/Fondo_Requisitos.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 600px;
+  height: auto;
+  padding: 50px 0px;
+  border-bottom: 10px solid var(--rosa);
+}
+.mexi-auto .auto-sec9 .auto-title9 {
+  text-align: center;
+  color: var(--blanco);
+  font-size: 35px;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-bottom: 20px;
+}
+.mexi-auto .auto-sec9 .yellow-line {
+  background: var(--amarillo);
+  height: 5px;
+  width: 7%;
+  margin: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+.mexi-auto .auto-sec9 .requisitos ul .list-req {
+  list-style-image: url(../img/creditos/mexi-auto/Icon-Check_small.png);
+  color: var(--blanco);
+  font-size: 16px;
+}
+.mexi-auto .auto-sec9 .requisitos ul .list-req2 {
+  color: var(--blanco);
+  font-size: 16px;
+}
+.mexi-auto .f-sec1 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/Img_Fondo_Footer.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 450px;
+  height: auto;
+  padding: 40px 0px;
+}
+.mexi-auto .f-sec1 .title-footer {
+  font-size: 35px;
+  text-align: center;
+  color: var(--blanco);
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.mexi-auto .f-sec1 .green-line {
+  background: var(--verde);
+  height: 5px;
+  width: 7%;
+  margin: auto;
+  display: block;
+  margin-bottom: 50px;
+}
+.mexi-auto .f-sec1 .text-form {
+  color: var(--negro-texto);
+  font-size: 22px;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 30px;
+}
+.mexi-auto .f-sec1 .text-form .parrafo-footer {
+  color: var(--negro-texto);
+  font-size: 24px;
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-auto .f-sec1 .text-form .tel-footer {
+  color: var(--blanco);
+  text-decoration: none;
+}
+.mexi-auto .f-sec1 .redes {
+  color: var(--blanco);
+  font-size: 24px;
+  font-family: "NewJune-Bold", sans-serif;
+  float: left;
+  display: contents;
+}
+.mexi-auto .f-sec1 .redes ul {
+  display: inline-block;
+  list-style: none;
+  padding: 15px 0px;
+  margin: 0px;
+}
+.mexi-auto .f-sec1 .redes ul li {
+  display: inline-block;
+}
+.mexi-auto .f-sec1 .redes ul li .link-red {
+  display: block;
+  width: 100%;
+  max-width: 60px;
+  margin: 0 7px;
+}
+.mexi-auto .f-sec1 .form-footer {
+  background: var(--rosa);
+  padding: 20px;
+  min-height: 460px;
+  height: auto;
+}
+.mexi-auto .f-sec1 .form-footer .title-form {
+  color: var(--blanco);
+  font-family: "NewJune-Medium-Italic", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.mexi-auto .f-sec1 .form-footer label {
+  width: 100%;
+  color: var(--blanco);
+  font-size: 14px;
+}
+.mexi-auto .f-sec1 .form-footer input {
+  width: 100%;
+  color: var(--negro-texto);
+  border: none;
+}
+.mexi-auto .f-sec1 .form-footer textarea {
+  width: 100%;
+  color: var(--negro-texto);
+  border: none;
+}
+.mexi-auto .f-sec1 .form-footer button {
+  background: var(--verde);
+  color: var(--blanco);
+  font-size: 14px;
+  border: none;
+  float: right;
+  padding: 5px 50px;
+  margin-top: 10px;
+  font-family: "NewJune-Medium-Italic", sans-serif;
+  font-weight: 700;
+}
+.mexi-auto .f-sec1 .copy {
+  text-align: center;
+  font-size: 12px;
+  color: var(--negro-texto);
+  margin-top: 50px;
+}
+.mexi-auto .f-sec1 .copy .link-fut {
+  color: var(--negro-texto);
+}
+.mexi-auto .f-sec2 {
+  display: inline-block;
+  width: 100%;
+  min-height: 100px;
+  height: auto;
+  vertical-align: top;
+  background: var(--azul);
+  padding: 30px 0px;
+}
+.mexi-auto .f-sec2 .aliados {
+  display: block;
+  margin: auto;
+}
+.mexi-auto .f-sec2 .aliados .aliado {
+  width: calc((100% - 40px) / 5);
+  display: inline-block;
+}
+.mexi-auto .f-sec2 .aliados .aliado .img-aliado1 {
+  margin: auto;
+  display: block;
+  margin-top: -40px;
+  max-width: 100%;
+}
+.mexi-auto .f-sec2 .aliados .aliado .img-aliado {
+  margin: auto;
+  display: block;
+  max-width: 100%;
+}
+.mexi-auto .f-sec3 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: var(--rosa);
+  text-align: center;
+  padding: 20px 0px;
+}
+.mexi-auto .f-sec3 .derechos {
+  display: inline-block;
+}
+.mexi-auto .f-sec3 .derechos .avi {
+  list-style: none;
+  color: var(--blanco);
+  border-right: 2px solid var(--blanco);
+  min-height: 50px;
+  padding: 0px 30px;
+}
+.mexi-auto .f-sec3 .derechos .avi a {
+  font-size: 16px;
+  font-family: "NewJune-Bold", sans-serif;
+  color: var(--blanco);
+}
+.mexi-auto .f-sec3 .derechos .avi2 {
+  list-style: none;
+  color: var(--blanco);
+  min-height: 50px;
+  padding: 0px 30px;
+}
+.mexi-auto .f-sec3 .derechos .avi2 a {
+  font-size: 16px;
+  font-family: "NewJune-Bold", sans-serif;
+  color: var(--blanco);
+}
+.mexi-auto .f-sec4 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: var(--blanco);
+  padding: 30px 0px;
+  /*.comisiones {
+      margin-top: 30px;
+      .comision {
+          width: calc((100% - 20px) / 5);
+          display: inline-table;
+          .partop {
+              font-size: 12px;
+              background: var(--azul);
+              color: var(--blanco);
+              text-align: center;
+              font-family: 'NewJune-Bold', sans-serif;
+              padding: 5px 0px;
+          }
+          .partbottom {
+              font-size: 12px;
+              background: #f2f2f2;
+              color: var(--negro-texto);
+              text-align: center;
+              font-family: 'NewJune-Bold', sans-serif;
+              padding: 5px 0px;
+              display: block;
+              min-height: 50px;
+              height: auto;
+          }
+      }
+  }*/
+}
+.mexi-auto .f-sec4 .titlecuatro {
+  color: var(--negro-texto);
+  font-size: 18px;
+  text-align: center;
+}
+.mexi-auto .f-sec4 .titlecuatro .sofom {
+  color: var(--azul);
+  font-size: 18px;
+  text-align: center;
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-auto .f-sec4 .valor {
+  color: var(--negro-texto);
+  font-size: 16px;
+  text-align: center;
+  margin: 2% 0;
+}
+.mexi-auto .f-sec4 .cat {
+  color: var(--negro-texto);
+  font-size: 10px;
+  text-align: center;
+}
+.mexi-auto .f-sec4 .cat .cat-prom {
+  color: var(--negro-texto);
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-auto .politicas {
+  display: inline-block;
+  width: 100%;
+  padding: 20px 0px;
+  vertical-align: top;
+  background: var(--blanco);
+}
+.mexi-auto .politicas p {
+  font-size: 10px;
+  color: var(--negro);
+  text-align: center;
+}
+.mexi-auto .f-sec5 {
+  display: inline-block;
+  width: 100%;
+  padding: 20px 0px;
+  vertical-align: top;
+  background: #e6e6e6;
+}
+.mexi-auto .f-sec5 .copy {
+  text-align: center;
+  font-size: 12px;
+  color: var(--negro);
+}
+.mexi-auto .f-sec5 .copy .link-fut {
+  color: var(--negro);
+}
+
+@media (max-width: 2000px) and (min-width: 1201px) {
+  .mexi-auto .auto-sec8 {
+    min-height: 600px;
+  }
+}
+@media (max-width: 767px) and (min-width: 0px) {
+  .mexi-auto .auto-sec1 {
+    min-height: 300px;
+  }
+  .mexi-auto .auto-sec1 .auto1 .auto-title1 {
+    font-size: 50px;
+    margin-top: 50px;
+  }
+  .mexi-auto .auto-sec4 .obten .auto-title4 {
+    margin-top: 20px;
+  }
+  .mexi-auto .auto-sec5 {
+    text-align: center;
+  }
+  .mexi-auto .auto-sec5 .beneficio .img-benefit {
+    margin: auto;
+    display: block;
+  }
+  .mexi-auto .auto-sec6 {
+    min-height: 250px;
+    background: url(../img/creditos/mexi-auto/Banner_EnMEXItuburo.jpg);
+  }
+  .mexi-auto .auto-sec6 .auto-title6 {
+    width: 100%;
+    margin: 30px 0px;
+  }
+  .mexi-auto .auto-sec7 .credit-list {
+    padding: 0px 25px;
+  }
+  .mexi-auto .auto-sec7 .credit-list .auto-title7 {
+    margin-top: 50px;
+  }
+  .mexi-auto .auto-sec8 {
+    background: url(../img/creditos/mexi-auto/Banner_Tuprestmoenmenos.jpg);
+    padding: 50px 20px;
+  }
+  .mexi-auto .auto-sec8 .auto-title8 {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .mexi-auto .f-sec2 .aliados .aliado {
+    width: calc((100% - 20px) / 2);
+    padding: 15px;
+  }
+  .mexi-auto .f-sec3 .derechos .avi {
+    border-right: none;
+    margin-bottom: 15px;
+  }
+  .mexi-auto .f-sec4 .comisiones .comision {
+    width: calc((100% - 20px) / 2);
+    display: -ms-inline-grid;
+    display: inline-grid;
+  }
+}
+/* Mexi Simple Section */
+.mexi-simple {
+  /* FOOTER SECTION */
+}
+.mexi-simple .simple-sec1 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-simple/Banner_Principal.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  height: auto;
+}
+.mexi-simple .simple-sec1 .simple-title1 {
+  background: var(--verde);
+  color: var(--blanco);
+  font-size: 80px;
+  margin-top: 150px;
+  padding: 5px 40px;
+  display: inline-block;
+  font-family: "Bariol_Regular", sans-serif;
+  font-weight: 700;
+}
+.mexi-simple .simple-sec1 .cta-banner {
+  background: var(--rosa);
+  color: var(--blanco);
+  font-size: 20px;
+  font-family: "NewJune-Bold", sans-serif;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  border-radius: 0px;
+}
+.mexi-simple .simple-sec2 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-simple/Fondo_PrestamossinBuro.html) center center no-repeat;
+  background-size: cover;
+  padding: 80px 0px;
+}
+.mexi-simple .simple-sec2 .img-mexisimple {
+  margin: auto;
+  display: block;
+}
+.mexi-simple .simple-sec2 .simple-title2 {
+  color: var(--verde);
+  font-size: 40px;
+  font-family: "NewJune-Bold", sans-serif;
+  border-left: 6px solid var(--rosa);
+  padding: 0px 20px;
+  margin-top: 5%;
+}
+.mexi-simple .simple-sec2 .simple-title2 .contigo {
+  color: var(--negro-texto);
+  font-size: 30px;
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-simple .simple-sec3 .progreso {
+  display: inline-block;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-simple/Fondo_EnMEXIcreemos.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 420px;
+  height: auto;
+  padding: 50px;
+}
+.mexi-simple .simple-sec3 .progreso .simple-title3 {
+  color: var(--blanco);
+  text-align: center;
+  font-size: 22px;
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-simple .simple-sec3 .progreso .rose-line {
+  height: 6px;
+  background: var(--rosa);
+  width: 10%;
+  margin: auto;
+  display: block;
+  margin-top: 20px;
+}
+.mexi-simple .simple-sec3 .imagen1-simple {
+  display: inline-block;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-simple/Img_EnMEXIcreemos.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 420px;
+  height: auto;
+}
+.mexi-simple .simple-sec4 .imagen2-simple {
+  display: inline-block;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-simple/Img_ObtenDesde.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  height: auto;
+}
+.mexi-simple .simple-sec4 .obten {
+  display: inline-block;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-simple/Fondo_ObtenDesde.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  height: auto;
+}
+.mexi-simple .simple-sec4 .obten .simple-title4 {
+  color: var(--blanco);
+  text-align: center;
+  font-size: 50px;
+  margin-top: 110px;
+}
+.mexi-simple .simple-sec4 .obten .simple-title4 .tresmil {
+  color: var(--azul);
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-simple .simple-sec4 .obten .simple-title4 .cienmil {
+  color: var(--rosa);
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-simple .simple-sec5 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-simple/Fondo_Beneficios.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  height: auto;
+  padding: 50px 0px;
+}
+.mexi-simple .simple-sec5 .simple-title5 {
+  font-size: 35px;
+  text-align: center;
+  color: var(--azul);
+  font-family: "NewJune-Bold", sans-serif;
+  margin-bottom: 20px;
+}
+.mexi-simple .simple-sec5 .rose-line {
+  background: var(--rosa);
+  height: 5px;
+  width: 7%;
+  margin: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+.mexi-simple .simple-sec5 .simple-title5a {
+  color: var(--negro-texto);
+  font-family: "NewJune-Bold", sans-serif;
+  text-align: center;
+  font-size: 22px;
+}
+.mexi-simple .simple-sec5 .beneficio {
+  display: inline-block;
+  margin-top: 50px;
+}
+.mexi-simple .simple-sec5 .beneficio .title-benefit {
+  color: var(--negro-texto);
+  font-size: 28px;
+  display: inline-block;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 20px;
+}
+.mexi-simple .simple-sec5 .beneficio .text-benefit {
+  color: var(--negro-texto);
+  font-size: 16px;
+  display: inline-block;
+}
+.mexi-simple .simple-sec6 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-simple/Banner_Apoyamoslebienestar.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  height: auto;
+}
+.mexi-simple .simple-sec6 .simple-title6 {
+  font-size: 25px;
+  color: var(--blanco);
+  width: 40%;
+  margin-top: 100px;
+  display: block;
+  line-height: 40px;
+}
+.mexi-simple .simple-sec6 .simple-title6 .anios {
+  color: var(--blanco);
+  font-size: 35px;
+  font-weight: 900;
+  font-style: italic;
+  font-family: "NewJune-Bold", sans-serif;
+  text-transform: uppercase;
+}
+.mexi-simple .simple-sec7 .credit-list {
+  display: inline-block;
+  /*width: 50%;*/
+  vertical-align: top;
+  background: var(--azul);
+  min-height: 450px;
+  height: auto;
+  padding: 0px 50px;
+}
+.mexi-simple .simple-sec7 .credit-list .simple-title7 {
+  color: var(--blanco);
+  font-size: 30px;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 120px;
+}
+.mexi-simple .simple-sec7 .credit-list .yellow-line {
+  height: 5px;
+  background: var(--amarillo);
+  width: 10%;
+  margin: 4% 0%;
+}
+.mexi-simple .simple-sec7 .credit-list li {
+  color: var(--blanco);
+  font-size: 16px;
+}
+.mexi-simple .simple-sec7 .imagen3-simple {
+  display: inline-block;
+  /*width: 50%;*/
+  vertical-align: top;
+  background: url(../img/creditos/mexi-simple/Img_Caracteristicas.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 450px;
+  height: auto;
+}
+.mexi-simple .simple-sec8 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-simple/Banner_Respuestaenmenos.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 450px;
+  height: auto;
+  padding: 50px 40px;
+}
+.mexi-simple .simple-sec8 .simple-title8 {
+  font-size: 22px;
+  color: var(--blanco);
+  width: 80%;
+  margin-top: 100px;
+}
+.mexi-simple .simple-sec8 .simple-title8 .horas {
+  text-transform: uppercase;
+  font-size: 40px;
+  color: var(--blanco);
+  font-family: "NewJune-Bold", sans-serif;
+  margin-bottom: 20px;
+  display: block;
+  line-height: 40px;
+}
+.mexi-simple .simple-sec9 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-simple/Fondo_Requisitos.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 600px;
+  height: auto;
+  padding: 50px 0px;
+}
+.mexi-simple .simple-sec9 .simple-title9 {
+  text-align: center;
+  color: var(--blanco);
+  font-size: 35px;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-bottom: 20px;
+}
+.mexi-simple .simple-sec9 .yellow-line {
+  background: var(--amarillo);
+  height: 5px;
+  width: 7%;
+  margin: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+.mexi-simple .simple-sec9 .requisitos ul .list-req {
+  list-style-image: url(../img/creditos/mexi-simple/Icon-Check_Small.png);
+  color: var(--blanco);
+  font-size: 16px;
+}
+.mexi-simple .simple-sec9 .requisitos ul .list-req2 {
+  color: var(--blanco);
+  font-size: 16px;
+}
+.mexi-simple .simple-sec10 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-simple/Banner_Hcemosrealidad.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  height: auto;
+  padding: 50px 40px;
+}
+.mexi-simple .simple-sec10 .simple-title10 {
+  font-size: 22px;
+  color: var(--blanco);
+  width: 80%;
+  margin-top: 100px;
+}
+.mexi-simple .simple-sec10 .simple-title10 .realidad {
+  text-transform: uppercase;
+  font-size: 40px;
+  color: var(--rosa);
+  font-family: "NewJune-Bold", sans-serif;
+  margin-bottom: 20px;
+  display: block;
+  line-height: 40px;
+}
+.mexi-simple .f-sec1 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/Img_Fondo_Footer.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 450px;
+  height: auto;
+  padding: 40px 0px;
+}
+.mexi-simple .f-sec1 .title-footer {
+  font-size: 35px;
+  text-align: center;
+  color: var(--blanco);
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.mexi-simple .f-sec1 .green-line {
+  background: var(--verde);
+  height: 5px;
+  width: 7%;
+  margin: auto;
+  display: block;
+  margin-bottom: 50px;
+}
+.mexi-simple .f-sec1 .text-form {
+  color: var(--negro-texto);
+  font-size: 22px;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 30px;
+}
+.mexi-simple .f-sec1 .text-form .parrafo-footer {
+  color: var(--negro-texto);
+  font-size: 24px;
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-simple .f-sec1 .text-form .tel-footer {
+  color: var(--blanco);
+  text-decoration: none;
+}
+.mexi-simple .f-sec1 .redes {
+  color: var(--blanco);
+  font-size: 24px;
+  font-family: "NewJune-Bold", sans-serif;
+  float: left;
+  display: contents;
+}
+.mexi-simple .f-sec1 .redes ul {
+  display: inline-block;
+  list-style: none;
+  padding: 15px 0px;
+  margin: 0px;
+}
+.mexi-simple .f-sec1 .redes ul li {
+  display: inline-block;
+}
+.mexi-simple .f-sec1 .redes ul li .link-red {
+  display: block;
+  width: 100%;
+  max-width: 60px;
+  margin: 0 7px;
+}
+.mexi-simple .f-sec1 .form-footer {
+  background: var(--rosa);
+  padding: 20px;
+  min-height: 460px;
+  height: auto;
+}
+.mexi-simple .f-sec1 .form-footer .title-form {
+  color: var(--blanco);
+  font-family: "NewJune-Medium-Italic", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.mexi-simple .f-sec1 .form-footer label {
+  width: 100%;
+  color: var(--blanco);
+  font-size: 14px;
+}
+.mexi-simple .f-sec1 .form-footer input {
+  width: 100%;
+  color: var(--negro-texto);
+  border: none;
+}
+.mexi-simple .f-sec1 .form-footer textarea {
+  width: 100%;
+  color: var(--negro-texto);
+  border: none;
+}
+.mexi-simple .f-sec1 .form-footer button {
+  background: var(--verde);
+  color: var(--blanco);
+  font-size: 14px;
+  border: none;
+  float: right;
+  padding: 5px 50px;
+  margin-top: 10px;
+  font-family: "NewJune-Medium-Italic", sans-serif;
+  font-weight: 700;
+}
+.mexi-simple .f-sec1 .copy {
+  text-align: center;
+  font-size: 12px;
+  color: var(--negro-texto);
+  margin-top: 50px;
+}
+.mexi-simple .f-sec1 .copy .link-fut {
+  color: var(--negro-texto);
+}
+.mexi-simple .f-sec2 {
+  display: inline-block;
+  width: 100%;
+  min-height: 100px;
+  height: auto;
+  vertical-align: top;
+  background: var(--azul);
+  padding: 30px 0px;
+}
+.mexi-simple .f-sec2 .aliados {
+  display: block;
+  margin: auto;
+}
+.mexi-simple .f-sec2 .aliados .aliado {
+  width: calc((100% - 40px) / 5);
+  display: inline-block;
+}
+.mexi-simple .f-sec2 .aliados .aliado .img-aliado1 {
+  margin: auto;
+  display: block;
+  margin-top: -40px;
+  max-width: 100%;
+}
+.mexi-simple .f-sec2 .aliados .aliado .img-aliado {
+  margin: auto;
+  display: block;
+  max-width: 100%;
+}
+.mexi-simple .f-sec3 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: var(--rosa);
+  text-align: center;
+  padding: 20px 0px;
+}
+.mexi-simple .f-sec3 .derechos {
+  display: inline-block;
+}
+.mexi-simple .f-sec3 .derechos .avi {
+  list-style: none;
+  color: var(--blanco);
+  border-right: 2px solid var(--blanco);
+  min-height: 50px;
+  padding: 0px 30px;
+}
+.mexi-simple .f-sec3 .derechos .avi a {
+  font-size: 16px;
+  font-family: "NewJune-Bold", sans-serif;
+  color: var(--blanco);
+}
+.mexi-simple .f-sec3 .derechos .avi2 {
+  list-style: none;
+  color: var(--blanco);
+  min-height: 50px;
+  padding: 0px 30px;
+}
+.mexi-simple .f-sec3 .derechos .avi2 a {
+  font-size: 16px;
+  font-family: "NewJune-Bold", sans-serif;
+  color: var(--blanco);
+}
+.mexi-simple .f-sec4 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: var(--blanco);
+  padding: 30px 0px;
+  /*.comisiones {
+      margin-top: 30px;
+      .comision {
+          width: calc((100% - 20px) / 5);
+          display: inline-table;
+          .partop {
+              font-size: 12px;
+              background: var(--azul);
+              color: var(--blanco);
+              text-align: center;
+              font-family: 'NewJune-Bold', sans-serif;
+              padding: 5px 0px;
+          }
+          .partbottom {
+              font-size: 12px;
+              background: #f2f2f2;
+              color: var(--negro-texto);
+              text-align: center;
+              font-family: 'NewJune-Bold', sans-serif;
+              padding: 5px 0px;
+              display: block;
+              min-height: 50px;
+              height: auto;
+          }
+      }
+  }*/
+}
+.mexi-simple .f-sec4 .titlecuatro {
+  color: var(--negro-texto);
+  font-size: 18px;
+  text-align: center;
+}
+.mexi-simple .f-sec4 .titlecuatro .sofom {
+  color: var(--azul);
+  font-size: 18px;
+  text-align: center;
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-simple .f-sec4 .valor {
+  color: var(--negro-texto);
+  font-size: 16px;
+  text-align: center;
+  margin: 2% 0;
+}
+.mexi-simple .f-sec4 .cat {
+  color: var(--negro-texto);
+  font-size: 10px;
+  text-align: center;
+}
+.mexi-simple .f-sec4 .cat .cat-prom {
+  color: var(--negro-texto);
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-simple .politicas {
+  display: inline-block;
+  width: 100%;
+  padding: 20px 0px;
+  vertical-align: top;
+  background: var(--blanco);
+}
+.mexi-simple .politicas p {
+  font-size: 10px;
+  color: var(--negro);
+  text-align: center;
+}
+.mexi-simple .f-sec5 {
+  display: inline-block;
+  width: 100%;
+  padding: 20px 0px;
+  vertical-align: top;
+  background: #e6e6e6;
+}
+.mexi-simple .f-sec5 .copy {
+  text-align: center;
+  font-size: 12px;
+  color: var(--negro);
+}
+.mexi-simple .f-sec5 .copy .link-fut {
+  color: var(--negro);
+}
+
+@media (max-width: 767px) and (min-width: 570px) {
+  .mexi-simple .simple-sec6 .simple-title6 {
+    width: 100%;
+  }
+  .mexi-simple .simple-sec8 .simple-title8 {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .mexi-simple .simple-sec10 .simple-title10 {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .mexi-simple .f-sec2 .aliados .aliado {
+    width: calc((100% - 20px) / 2);
+    padding: 15px;
+  }
+  .mexi-simple .f-sec3 .derechos .avi {
+    border-right: none;
+    margin-bottom: 15px;
+  }
+  .mexi-simple .f-sec4 .comisiones .comision {
+    width: calc((100% - 20px) / 2);
+    display: -ms-inline-grid;
+    display: inline-grid;
+  }
+}
+@media (max-width: 569px) and (min-width: 480px) {
+  .mexi-simple .simple-sec6 .simple-title6 {
+    width: 100%;
+  }
+  .mexi-simple .simple-sec7 .credit-list .simple-title7 {
+    margin-top: 50px;
+  }
+  .mexi-simple .simple-sec8 .simple-title8 {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .mexi-simple .simple-sec10 .simple-title10 {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .mexi-simple .f-sec2 .aliados .aliado {
+    width: calc((100% - 20px) / 2);
+    padding: 15px;
+  }
+  .mexi-simple .f-sec3 .derechos .avi {
+    border-right: none;
+    margin-bottom: 15px;
+  }
+  .mexi-simple .f-sec4 .comisiones .comision {
+    width: calc((100% - 20px) / 2);
+    display: -ms-inline-grid;
+    display: inline-grid;
+  }
+}
+@media (max-width: 479px) and (min-width: 0px) {
+  .mexi-simple .simple-sec1 {
+    min-height: 300px;
+  }
+  .mexi-simple .simple-sec1 .simple-title1 {
+    font-size: 50px;
+    margin-top: 50px;
+    padding: 5px 20px;
+  }
+  .mexi-simple .simple-sec3 .progreso {
+    padding: 20px;
+  }
+  .mexi-simple .simple-sec4 .obten .simple-title4 {
+    margin-top: 50px;
+  }
+  .mexi-simple .simple-sec6 .simple-title6 {
+    width: 100%;
+  }
+  .mexi-simple .simple-sec7 .credit-list .simple-title7 {
+    margin-top: 50px;
+  }
+  .mexi-simple .simple-sec8 .simple-title8 {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .mexi-simple .simple-sec10 .simple-title10 {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .mexi-simple .f-sec2 .aliados .aliado {
+    width: calc((100% - 20px) / 2);
+    padding: 15px;
+  }
+  .mexi-simple .f-sec3 .derechos .avi {
+    border-right: none;
+    margin-bottom: 15px;
+  }
+  .mexi-simple .f-sec4 .comisiones .comision {
+    width: calc((100% - 20px) / 2);
+    display: -ms-inline-grid;
+    display: inline-grid;
+  }
+}
+/* Mexi Nomina Section */
+.mexi-nomina {
+  /* FOOTER SECTION */
+}
+.mexi-nomina .nomina-sec1 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-nomina/Banner_Principal.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  height: auto;
+}
+.mexi-nomina .nomina-sec1 .nomina-title1 {
+  background: var(--azul);
+  color: var(--blanco);
+  font-size: 80px;
+  margin-top: 150px;
+  padding: 5px 40px;
+  display: inline-block;
+  font-family: "Bariol_Regular", sans-serif;
+  font-weight: 700;
+}
+.mexi-nomina .nomina-sec1 .cta-banner {
+  background: var(--rosa);
+  color: var(--blanco);
+  font-size: 20px;
+  font-family: "NewJune-Bold", sans-serif;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  border-radius: 0px;
+}
+.mexi-nomina .nomina-sec2 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-nomina/Fondo_Creditodenomina.jpg) center center no-repeat;
+  background-size: cover;
+  padding: 80px 0px;
+}
+.mexi-nomina .nomina-sec2 .img-mexinomina {
+  margin: auto;
+  display: block;
+  margin-top: 20px;
+}
+.mexi-nomina .nomina-sec2 .nomina-title2 {
+  color: var(--verde);
+  font-size: 40px;
+  font-family: "NewJune-Bold", sans-serif;
+  border-left: 6px solid var(--rosa);
+  padding: 0px 20px;
+}
+.mexi-nomina .nomina-sec2 .nomina-title2 .contigo {
+  color: var(--negro-texto);
+  font-size: 30px;
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-nomina .nomina-sec3 .alternativa {
+  display: inline-block;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-nomina/Fondo_MEXInominaes.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 420px;
+  height: auto;
+  padding: 50px;
+}
+.mexi-nomina .nomina-sec3 .alternativa .nomina-title3 {
+  color: var(--blanco);
+  text-align: center;
+  font-size: 22px;
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-nomina .nomina-sec3 .alternativa .rose-line {
+  height: 6px;
+  background: var(--rosa);
+  width: 10%;
+  margin: auto;
+  display: block;
+  margin-top: 20px;
+}
+.mexi-nomina .nomina-sec3 .imagen1-nomina {
+  display: inline-block;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-nomina/Img_MEXInominaes.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 420px;
+  height: auto;
+}
+.mexi-nomina .nomina-sec4 .imagen2-nomina {
+  display: inline-block;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-nomina/Img_Prestamosdesde.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  height: auto;
+}
+.mexi-nomina .nomina-sec4 .obten {
+  display: inline-block;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-nomina/Fondo_Prestamosdesde.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  height: auto;
+}
+.mexi-nomina .nomina-sec4 .obten .nomina-title4 {
+  color: var(--blanco);
+  text-align: center;
+  font-size: 50px;
+  margin-top: 110px;
+}
+.mexi-nomina .nomina-sec4 .obten .nomina-title4 .tresmil {
+  color: var(--verde);
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-nomina .nomina-sec4 .obten .nomina-title4 .cienmil {
+  color: var(--amarillo);
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-nomina .nomina-sec5 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-nomina/Fondo_Beneficios.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  height: auto;
+  padding: 50px 0px;
+}
+.mexi-nomina .nomina-sec5 .nomina-title5 {
+  font-size: 35px;
+  text-align: center;
+  color: var(--azul);
+  font-family: "NewJune-Bold", sans-serif;
+  margin-bottom: 20px;
+}
+.mexi-nomina .nomina-sec5 .rose-line {
+  background: var(--rosa);
+  height: 5px;
+  width: 7%;
+  margin: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+.mexi-nomina .nomina-sec5 .nomina-title5a {
+  color: var(--negro-texto);
+  font-family: "NewJune-Bold", sans-serif;
+  text-align: center;
+  font-size: 22px;
+}
+.mexi-nomina .nomina-sec5 .beneficio {
+  margin-top: 50px;
+}
+.mexi-nomina .nomina-sec5 .beneficio .img-benefit {
+  margin: auto;
+  display: block;
+}
+.mexi-nomina .nomina-sec5 .beneficio .title-benefit {
+  color: var(--negro-texto);
+  font-size: 28px;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 20px;
+  text-align: center;
+}
+.mexi-nomina .nomina-sec5 .beneficio .text-benefit {
+  color: var(--negro-texto);
+  font-size: 18px;
+  text-align: center;
+  margin-top: -15px;
+}
+.mexi-nomina .nomina-sec6 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-nomina/Banner_Estamosparaapoyar.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  height: auto;
+}
+.mexi-nomina .nomina-sec6 .nomina-title6 {
+  font-size: 25px;
+  color: var(--blanco);
+  width: 30%;
+  margin-top: 100px;
+  display: block;
+  line-height: 40px;
+}
+.mexi-nomina .nomina-sec6 .nomina-title6 .anios {
+  color: var(--blanco);
+  font-size: 35px;
+  font-weight: 900;
+  font-style: italic;
+  font-family: "NewJune-Bold", sans-serif;
+  text-transform: uppercase;
+}
+.mexi-nomina .nomina-sec7 .credit-list {
+  display: inline-block;
+  vertical-align: top;
+  background: var(--azul);
+  min-height: 450px;
+  height: auto;
+  padding: 0px 50px;
+}
+.mexi-nomina .nomina-sec7 .credit-list .nomina-title7 {
+  color: var(--blanco);
+  font-size: 30px;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 120px;
+}
+.mexi-nomina .nomina-sec7 .credit-list .yellow-line {
+  height: 5px;
+  background: var(--amarillo);
+  width: 10%;
+  margin: 4% 0%;
+}
+.mexi-nomina .nomina-sec7 .credit-list li {
+  color: var(--blanco);
+  font-size: 16px;
+}
+.mexi-nomina .nomina-sec7 .imagen3-nomina {
+  display: inline-block;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-nomina/Img_Caracteristicas.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 450px;
+  height: auto;
+}
+.mexi-nomina .nomina-sec8 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-nomina/Banner_Tiempoderespuesta.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 450px;
+  height: auto;
+  padding: 50px 40px;
+}
+.mexi-nomina .nomina-sec8 .nomina-title8 {
+  font-size: 22px;
+  color: var(--blanco);
+  width: 80%;
+  margin-top: 50px;
+}
+.mexi-nomina .nomina-sec8 .nomina-title8 .horas {
+  text-transform: uppercase;
+  font-size: 40px;
+  color: var(--blanco);
+  font-family: "NewJune-Bold", sans-serif;
+  margin-bottom: 20px;
+  display: block;
+  line-height: 40px;
+}
+.mexi-nomina .nomina-sec9 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-nomina/Fondo_Requisitos.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 600px;
+  height: auto;
+  padding: 50px 0px;
+}
+.mexi-nomina .nomina-sec9 .nomina-title9 {
+  text-align: center;
+  color: var(--blanco);
+  font-size: 35px;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-bottom: 20px;
+}
+.mexi-nomina .nomina-sec9 .yellow-line {
+  background: var(--amarillo);
+  height: 5px;
+  width: 7%;
+  margin: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+.mexi-nomina .nomina-sec9 .requisitos {
+  width: 70%;
+  margin: auto;
+  display: block;
+}
+.mexi-nomina .nomina-sec9 .requisitos .required-title {
+  color: var(--blanco);
+  font-size: 25px;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-bottom: 20px;
+}
+.mexi-nomina .nomina-sec9 .requisitos ul .list-req {
+  list-style-image: url(../img/creditos/mexi-nomina/Icon-Check_Small.png);
+  color: var(--blanco);
+  font-size: 16px;
+}
+.mexi-nomina .nomina-sec10 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/mexi-nomina/Banner_Somossolucionyconfianzajpg.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  height: auto;
+  padding: 50px 40px;
+}
+.mexi-nomina .nomina-sec10 .nomina-title10 {
+  font-size: 22px;
+  color: var(--blanco);
+  width: 80%;
+  margin-top: 100px;
+}
+.mexi-nomina .nomina-sec10 .nomina-title10 .realidad {
+  text-transform: uppercase;
+  font-size: 40px;
+  color: var(--rosa);
+  font-family: "NewJune-Bold", sans-serif;
+  margin-bottom: 20px;
+  display: block;
+  line-height: 40px;
+}
+.mexi-nomina .f-sec1 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/Img_Fondo_Footer.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 450px;
+  height: auto;
+  padding: 40px 0px;
+}
+.mexi-nomina .f-sec1 .title-footer {
+  font-size: 35px;
+  text-align: center;
+  color: var(--blanco);
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.mexi-nomina .f-sec1 .green-line {
+  background: var(--verde);
+  height: 5px;
+  width: 7%;
+  margin: auto;
+  display: block;
+  margin-bottom: 50px;
+}
+.mexi-nomina .f-sec1 .text-form {
+  color: var(--negro-texto);
+  font-size: 22px;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 30px;
+}
+.mexi-nomina .f-sec1 .text-form .parrafo-footer {
+  color: var(--negro-texto);
+  font-size: 24px;
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-nomina .f-sec1 .text-form .tel-footer {
+  color: var(--blanco);
+  text-decoration: none;
+}
+.mexi-nomina .f-sec1 .redes {
+  color: var(--blanco);
+  font-size: 24px;
+  font-family: "NewJune-Bold", sans-serif;
+  float: left;
+  display: contents;
+}
+.mexi-nomina .f-sec1 .redes ul {
+  display: inline-block;
+  list-style: none;
+  padding: 15px 0px;
+  margin: 0px;
+}
+.mexi-nomina .f-sec1 .redes ul li {
+  display: inline-block;
+}
+.mexi-nomina .f-sec1 .redes ul li .link-red {
+  display: block;
+  width: 100%;
+  max-width: 60px;
+  margin: 0 7px;
+}
+.mexi-nomina .f-sec1 .form-footer {
+  background: var(--rosa);
+  padding: 20px;
+  min-height: 460px;
+  height: auto;
+}
+.mexi-nomina .f-sec1 .form-footer .title-form {
+  color: var(--blanco);
+  font-family: "NewJune-Medium-Italic", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.mexi-nomina .f-sec1 .form-footer label {
+  width: 100%;
+  color: var(--blanco);
+  font-size: 14px;
+}
+.mexi-nomina .f-sec1 .form-footer input {
+  width: 100%;
+  color: var(--negro-texto);
+  border: none;
+}
+.mexi-nomina .f-sec1 .form-footer textarea {
+  width: 100%;
+  color: var(--negro-texto);
+  border: none;
+}
+.mexi-nomina .f-sec1 .form-footer button {
+  background: var(--verde);
+  color: var(--blanco);
+  font-size: 14px;
+  border: none;
+  float: right;
+  padding: 5px 50px;
+  margin-top: 10px;
+  font-family: "NewJune-Medium-Italic", sans-serif;
+  font-weight: 700;
+}
+.mexi-nomina .f-sec1 .copy {
+  text-align: center;
+  font-size: 12px;
+  color: var(--negro-texto);
+  margin-top: 50px;
+}
+.mexi-nomina .f-sec1 .copy .link-fut {
+  color: var(--negro-texto);
+}
+.mexi-nomina .f-sec2 {
+  display: inline-block;
+  width: 100%;
+  min-height: 100px;
+  height: auto;
+  vertical-align: top;
+  background: var(--azul);
+  padding: 30px 0px;
+}
+.mexi-nomina .f-sec2 .aliados {
+  display: block;
+  margin: auto;
+}
+.mexi-nomina .f-sec2 .aliados .aliado {
+  width: calc((100% - 40px) / 5);
+  display: inline-block;
+}
+.mexi-nomina .f-sec2 .aliados .aliado .img-aliado1 {
+  margin: auto;
+  display: block;
+  margin-top: -40px;
+  max-width: 100%;
+}
+.mexi-nomina .f-sec2 .aliados .aliado .img-aliado {
+  margin: auto;
+  display: block;
+  max-width: 100%;
+}
+.mexi-nomina .f-sec3 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: var(--rosa);
+  text-align: center;
+  padding: 20px 0px;
+}
+.mexi-nomina .f-sec3 .derechos {
+  display: inline-block;
+}
+.mexi-nomina .f-sec3 .derechos .avi {
+  list-style: none;
+  color: var(--blanco);
+  border-right: 2px solid var(--blanco);
+  min-height: 50px;
+  padding: 0px 30px;
+}
+.mexi-nomina .f-sec3 .derechos .avi a {
+  font-size: 16px;
+  font-family: "NewJune-Bold", sans-serif;
+  color: var(--blanco);
+}
+.mexi-nomina .f-sec3 .derechos .avi2 {
+  list-style: none;
+  color: var(--blanco);
+  min-height: 50px;
+  padding: 0px 30px;
+}
+.mexi-nomina .f-sec3 .derechos .avi2 a {
+  font-size: 16px;
+  font-family: "NewJune-Bold", sans-serif;
+  color: var(--blanco);
+}
+.mexi-nomina .f-sec4 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: var(--blanco);
+  padding: 30px 0px;
+  /*.comisiones {
+      margin-top: 30px;
+      .comision {
+          width: calc((100% - 20px) / 5);
+          display: inline-table;
+          .partop {
+              font-size: 12px;
+              background: var(--azul);
+              color: var(--blanco);
+              text-align: center;
+              font-family: 'NewJune-Bold', sans-serif;
+              padding: 5px 0px;
+          }
+          .partbottom {
+              font-size: 12px;
+              background: #f2f2f2;
+              color: var(--negro-texto);
+              text-align: center;
+              font-family: 'NewJune-Bold', sans-serif;
+              padding: 5px 0px;
+              display: block;
+              min-height: 50px;
+              height: auto;
+          }
+      }
+  }*/
+}
+.mexi-nomina .f-sec4 .titlecuatro {
+  color: var(--negro-texto);
+  font-size: 18px;
+  text-align: center;
+}
+.mexi-nomina .f-sec4 .titlecuatro .sofom {
+  color: var(--azul);
+  font-size: 18px;
+  text-align: center;
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-nomina .f-sec4 .valor {
+  color: var(--negro-texto);
+  font-size: 16px;
+  text-align: center;
+  margin: 2% 0;
+}
+.mexi-nomina .f-sec4 .cat {
+  color: var(--negro-texto);
+  font-size: 10px;
+  text-align: center;
+}
+.mexi-nomina .f-sec4 .cat .cat-prom {
+  color: var(--negro-texto);
+  font-family: "NewJune-Bold", sans-serif;
+}
+.mexi-nomina .politicas {
+  display: inline-block;
+  width: 100%;
+  padding: 20px 0px;
+  vertical-align: top;
+  background: var(--blanco);
+}
+.mexi-nomina .politicas p {
+  font-size: 10px;
+  color: var(--negro);
+  text-align: center;
+}
+.mexi-nomina .f-sec5 {
+  display: inline-block;
+  width: 100%;
+  padding: 20px 0px;
+  vertical-align: top;
+  background: #e6e6e6;
+}
+.mexi-nomina .f-sec5 .copy {
+  text-align: center;
+  font-size: 12px;
+  color: var(--negro);
+}
+.mexi-nomina .f-sec5 .copy .link-fut {
+  color: var(--negro);
+}
+
+@media (max-width: 2000px) and (min-width: 1201px) {
+  .mexi-nomina .nomina-sec3 .alternativa {
+    min-height: 550px;
+  }
+  .mexi-nomina .nomina-sec3 .alternativa .nomina-title3 {
+    margin-top: 100px;
+  }
+  .mexi-nomina .nomina-sec3 .imagen1-nomina {
+    min-height: 550px;
+  }
+  .mexi-nomina .nomina-sec4 .imagen2-nomina {
+    min-height: 550px;
+  }
+  .mexi-nomina .nomina-sec4 .obten {
+    min-height: 550px;
+    padding: 0px 150px;
+  }
+  .mexi-nomina .nomina-sec4 .obten .nomina-title4 {
+    margin-top: 150px;
+  }
+}
+@media (max-width: 767px) and (min-width: 0px) {
+  .mexi-nomina .nomina-sec1 {
+    min-height: 300px;
+  }
+  .mexi-nomina .nomina-sec1 .nomina-title1 {
+    font-size: 50px;
+    margin-top: 80px;
+    padding: 5px 5px;
+  }
+  .mexi-nomina .nomina-sec3 .alternativa {
+    padding: 20px;
+  }
+  .mexi-nomina .nomina-sec4 .obten .nomina-title4 {
+    margin-top: 50px;
+  }
+  .mexi-nomina .nomina-sec6 .nomina-title6 {
+    width: 100%;
+  }
+  .mexi-nomina .nomina-sec7 .credit-list .nomina-title7 {
+    margin-top: 50px;
+  }
+  .mexi-nomina .nomina-sec8 .nomina-title8 {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .mexi-nomina .nomina-sec9 .requisitos {
+    width: 100%;
+  }
+  .mexi-nomina .nomina-sec10 .nomina-title10 {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .mexi-nomina .f-sec2 .aliados .aliado {
+    width: calc((100% - 20px) / 2);
+    padding: 15px;
+  }
+  .mexi-nomina .f-sec3 .derechos .avi {
+    border-right: none;
+    margin-bottom: 15px;
+  }
+  .mexi-nomina .f-sec4 .comisiones .comision {
+    width: calc((100% - 20px) / 2);
+    display: -ms-inline-grid;
+    display: inline-grid;
+  }
+}
+/* Creditos Section */
+.creditos .credit-sec1 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/Img_BannerPrincipal.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  height: auto;
+}
+.creditos .credit-sec1 .title {
+  margin-top: 100px;
+}
+.creditos .credit-sec1 .title .mexi {
+  color: var(--blanco);
+  font-size: 55px;
+}
+.creditos .credit-sec1 .title .mexi span {
+  color: red;
+}
+.creditos .credit-sec1 .title h1 .title1a {
+  background: var(--rosa);
+  color: var(--blanco);
+  font-size: 55px;
+  padding: 10px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.creditos .credit-sec1 .title h1 .title1b {
+  background: var(--azul);
+  color: var(--blanco);
+  font-size: 28px;
+  padding: 10px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.creditos .credit-sec1 .title h1 .title1c {
+  background: var(--verde);
+  color: var(--blanco);
+  font-size: 28px;
+  padding: 10px;
+}
+.creditos .credit-sec2 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/Img_Fondo_Solucionesparacadanececidad.jpg) center center no-repeat;
+  background-size: cover;
+  padding: 80px 0px;
+}
+.creditos .credit-sec2 .credit-title1 {
+  color: var(--rosa);
+  font-size: 35px;
+  text-align: center;
+  font-weight: 700;
+}
+.creditos .credit-sec2 .green-line {
+  margin: auto;
+  display: block;
+  width: 10%;
+  height: 5px;
+  background: var(--verde);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.creditos .credit-sec2 .credit-title1a {
+  text-align: center;
+  color: var(--negro-texto);
+  font-size: 18px;
+}
+.creditos .credit-sec2 .credit-title1a strong {
+  font-family: "NewJune-Bold", sans-serif;
+}
+.creditos .credito_sec3 .secc01 {
+  height: 400px;
+  background: var(--azul);
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  color: var(--blanco);
+  padding: 50px 0px 0px 50px;
+}
+.creditos .credito_sec3 .secc01 .pqSolcitar {
+  font-family: "NewJune-Bold";
+  font-size: 30px;
+}
+.creditos .credito_sec3 .secc01 .amarillo-line {
+  display: block;
+  width: 10%;
+  height: 5px;
+  background: var(--amarillo);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.creditos .credito_sec3 .foto01 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/creditos-solicitar-credito.jpg) center center no-repeat;
+  background-size: cover;
+  padding: 80px 0px;
+  height: 400px;
+}
+.creditos .credito_sec3 .foto02 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/creditos-ventajas-creditos-personales.jpg) center center no-repeat;
+  background-size: cover;
+  height: 450px;
+}
+.creditos .credito_sec3 .secc02 {
+  height: 450px;
+  background: var(--verde);
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  color: var(--blanco);
+  padding: 20px 0px 0px 50px;
+}
+.creditos .cred-sec03 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/home/Img_Fondo_Creditos.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 700px;
+  height: auto;
+  padding: 30px 0px;
+}
+.creditos .cred-sec03 h2 {
+  text-align: center;
+  color: var(--negro-texto);
+  font-size: 35px;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-bottom: 20px;
+}
+.creditos .cred-sec03 .green-line {
+  background: var(--verde);
+  width: 7%;
+  height: 5px;
+  margin: auto;
+  display: block;
+  margin-top: 20px;
+}
+.creditos .cred-sec03 .title3 {
+  text-align: center;
+  font-size: 18px;
+  color: var(--rosa);
+  font-weight: 700;
+  margin-top: 20px;
+}
+.creditos .cred-sec03 .prestamos1 {
+  display: inline-block;
+  width: 100%;
+  margin-top: 30px;
+  /*.img-credito2 {
+      		margin: auto;
+      		display: block;
+  width: 178px;
+  height: 76px;
+      	}*/
+}
+.creditos .cred-sec03 .prestamos1 .img-credito {
+  margin: auto;
+  display: block;
+  width: 210px;
+  height: 149px;
+}
+.creditos .cred-sec03 .prestamos1 .credit-title h3 a {
+  color: var(--negro-texto) !important;
+  text-align: center;
+  font-size: 25px;
+  font-family: "NewJune-Bold", sans-serif;
+}
+.creditos .cred-sec03 .prestamos1 .credit-title .descripcion {
+  color: var(--negro-texto);
+  text-align: center;
+  font-size: 16px;
+  display: block;
+  font-family: "NewJune-Regular", sans-serif;
+}
+.creditos .cred-sec03 .prestamos2 {
+  display: block;
+  margin: auto;
+  width: 50%;
+  margin-top: 50px;
+}
+.creditos .cred-sec03 .prestamos2 .img-credito3 {
+  margin: auto;
+  display: block;
+  width: 85%;
+  height: 153px;
+}
+.creditos .cred-sec03 .prestamos2 .img-credito4 {
+  margin: 18% auto 20%;
+  display: block;
+  width: 212px;
+  height: 75px;
+}
+.creditos .cred-sec03 .prestamos2 .credit-title h3 a {
+  color: var(--negro-texto) !important;
+  text-align: center;
+  font-size: 25px;
+  font-family: "NewJune-Bold", sans-serif;
+}
+.creditos .cred-sec03 .prestamos2 .credit-title .descripcion {
+  color: var(--negro-texto);
+  text-align: center;
+  font-size: 16px;
+  display: block;
+  font-family: "NewJune-Regular", sans-serif;
+}
+.creditos .credit-sec3 .container-fluid {
+  padding: 0;
+}
+.creditos .credit-sec3 .container-fluid .slider-creditos .slide-credit {
+  /*width: 825px !important;*/
+  width: 640px !important;
+}
+.creditos .credit-sec3 .container-fluid .slider-creditos .slide-credit .img-credit {
+  width: 640px;
+  height: 363px;
+}
+.creditos .credit-sec3 .container-fluid .slider-creditos .slide-credit .fondo-credit {
+  padding: 20px;
+  min-height: 200px;
+  height: auto;
+}
+.creditos .credit-sec3 .container-fluid .slider-creditos .slide-credit .fondo-credit .img-mexi {
+  margin: auto;
+  display: block;
+  margin-top: 40px;
+}
+.creditos .credit-sec3 .container-fluid .slider-creditos .slide-credit .fondo-credit a {
+  color: var(--blanco);
+  font-size: 25px;
+  font-family: "NewJune-Bold", sans-serif;
+}
+.creditos .credit-sec3 .container-fluid .slider-creditos .slide-credit .fondo-credit .descrp-credit {
+  color: var(--blanco);
+  font-size: 16px;
+}
+.creditos .credit-sec3 .container-fluid .slider-creditos .bx-wrapper {
+  margin: 0;
+  border: none;
+  display: block;
+}
+.creditos .credit-sec3 .container-fluid .bx-wrapper {
+  /*-moz-box-shadow: 0 0 0px #ccc;
+     -webkit-box-shadow: 0 0 0px #ccc;
+     box-shadow: 0 0 0px #ccc;
+  margin: 0;
+  width: 100%;
+  min-height: 500px;
+  height: auto;
+  display: block;
+  border: none;
+  background: transparent;*/
+  margin: 0;
+  border: none;
+  display: block;
+}
+.creditos .credit-sec3 .container-fluid .bx-wrapper .bx-controls-direction a {
+  top: 35%;
+}
+.creditos .credit-sec4 {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: url(../img/creditos/Img_Fondo_Unsiatucredito.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  height: auto;
+}
+.creditos .credit-sec4 .unsi {
+  display: inline-block;
+  /*width: 50%;*/
+  vertical-align: top;
+  background-size: cover;
+  min-height: 400px;
+  height: auto;
+}
+.creditos .credit-sec4 .unsi .diquesi {
+  color: var(--blanco);
+  text-align: center;
+  font-size: 40px;
+  font-family: "NewJune-Bold", sans-serif;
+  margin-top: 120px;
+}
+.creditos .credit-sec4 .unsi .rose-line {
+  margin: auto;
+  display: block;
+  width: 10%;
+  height: 5px;
+  background: var(--verde);
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.creditos .credit-sec4 .unsi img {
+  margin: auto;
+}
+.creditos .credit-sec4 .credito-sueno {
+  display: inline-block;
+  /*width: 50%;*/
+  vertical-align: top;
+  background: url(../img/creditos/Img_Unsiatucredito.jpg) center center no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  height: auto;
+}
+.creditos .credit-sec4 .tips_para_credito {
+  font-family: "NewJune-Bold";
+  text-align: center;
+  font-size: 30px;
+  color: var(--negro-texto);
+  padding-top: 20px;
+}
+.creditos .credit-sec4 .info_credito {
+  text-align: center;
+  font-family: "NewJune-Bold";
+  font-size: 20px;
+  margin-top: 20px;
+}
+@media (max-width: 574px) and (min-width: 0px) {
+  .creditos .credito_sec3 .secc01 {
+    padding: 5%;
+    height: auto;
+  }
+  .creditos .credito_sec3 .secc02 {
+    padding: 5%;
+    height: auto;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 0px) {
+  .creditos .credit-sec1 {
+    min-height: 200px;
+    background-position-x: 65%;
+  }
+  .creditos .credit-sec1 .title {
+    margin-top: 5%;
+  }
+  .creditos .credit-sec1 .title h1 .title1a {
+    font-size: 22px;
+    font-family: "NewJune-Bold", sans-serif;
+    margin-bottom: 0;
+  }
+  .creditos .credit-sec1 .title h1 .title1b {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+  .creditos .credit-sec1 .title h1 .title1c {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+  .creditos .credit-sec3 .container-fluid .slider-creditos .slide-credit {
+    width: 370px !important;
+  }
+  .creditos .credit-sec3 .container-fluid .slider-creditos .slide-credit .fondo-credit {
+    min-height: 370px !important;
+  }
+}
+@media (max-width: 569px) and (min-width: 480px) {
+  .creditos {
+    /*.credit-sec3 {
+          	.container-fluid {
+          		.slider-creditos {
+          			.slide-credit {
+          				width: 470px !important;
+          				.fondo-credit {
+    				    min-height: 300px !important;
+
+    				}
+          			}
+          		}
+          	}
+          }*/
+  }
+  .creditos .credit-sec3 .container-fluid .slider-creditos .slide-credit .img-credit {
+    width: 370px;
+    height: 210px;
+  }
+}
+@media (max-width: 479px) and (min-width: 0px) {
+  .creditos {
+    /*.credit-sec3 {
+      	.container-fluid {
+      		.slider-creditos {
+      			.slide-credit {
+      				width: 370px !important;
+      				.fondo-credit {
+        min-height: 370px !important;
+    }
+      			}
+      		}
+      	}
+      }*/
+  }
+  .creditos .credit-sec3 .container-fluid .slider-creditos .slide-credit .img-credit {
+    width: 370px;
+    height: 210px;
+  }
+}
+/* *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- */
+/*               GRACIAS                        */
+/* *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- */
+.thankyou .body-gracias {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background-color: var(--azul);
+}
+.thankyou .body-gracias .gracias {
+  padding: 30px 0px 50px;
+  text-align: center;
+}
+.thankyou .body-gracias .gracias img {
+  width: 30%;
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+.thankyou .body-gracias .gracias h5 {
+  font-weight: 300;
+  color: var(--blanco);
+  font-size: 35px;
+  margin-bottom: 50px;
+}
+.thankyou .body-gracias .gracias h5 span {
+  color: var(--verde);
+  font-family: "NewJune-Bold", sans-serif;
+}
+.thankyou .body-gracias .gracias p {
+  font-weight: 300;
+  color: var(--blanco);
+  font-size: 25px;
+  margin-bottom: 70px;
+}
+.thankyou .body-gracias .gracias a {
+  color: var(--blanco);
+  font-weight: 700;
+  font-size: 25px;
+  background-color: var(--verde);
+  padding: 10px 40px;
+  font-family: "NewJune-Bold", sans-serif;
+  border-radius: 3px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+@media (max-width: 767px) and (min-width: 480px) {
+  .thankyou .body-gracias .gracias img {
+    width: 30%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 479px) and (min-width: 0px) {
+  .thankyou .body-gracias .gracias img {
+    width: 30%;
+    margin-bottom: 30px;
+  }
+}
+/******* HEADER 2 ********/
+.header-seguro {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: var(--blanco);
+  min-height: 50px;
+  position: fixed;
+  top: 0px;
+  z-index: 9999;
+}
+.header-seguro .navbar-default {
+  background-color: var(--blanco);
+  border-color: transparent;
+  padding: 10px;
+}
+.header-seguro .navbar-default .navbar-nav > li {
+  margin-top: 15px;
+}
+.header-seguro .navbar-default .navbar-nav > li span {
+  background: var(--negro-texto);
+  border-radius: 50%;
+  content: "\a";
+  display: inline-block;
+  height: 2px;
+  width: 2px;
+  margin: 22px 0;
+}
+.header-seguro .navbar-default .navbar-nav > li img {
+  display: block;
+  width: 23px;
+  margin: -5px;
+}
+.header-seguro .navbar-default .navbar-nav > li .fas {
+  margin-left: 5px;
+}
+.header-seguro .navbar-default .navbar-nav > li .dropdown-menu {
+  margin-top: 0;
+  border-radius: 6px;
+  left: 0px;
+}
+.header-seguro .navbar-default .navbar-nav > li .protege {
+  width: 100%;
+}
+.header-seguro .navbar-default .navbar-nav > li > a {
+  color: var(--negro-texto);
+  font-size: 14px;
+  font-family: "NewJune-Bold", sans-serif;
+}
+.header-seguro .navbar-default .navbar-nav > .active > a,
+.header-seguro .navbar-default .navbar-nav > .active > a:hover {
+  color: var(--negro-texto);
+  background-color: transparent;
+}
+.header-seguro .navbar-default .navbar-nav > .active > a:focus {
+  color: var(--rosa);
+}
+.header-seguro .navbar-default .navbar-nav > .active > a:visited {
+  color: var(--rosa);
+  border-bottom: 2px solid var(--rosa);
+}
+.header-seguro .navbar {
+  margin-bottom: 0px;
+  border: 0px solid transparent;
+}
+.header-seguro .navbar-brand {
+  height: auto;
+}
+.header-seguro .navbar-brand img {
+  margin-top: -10px;
+}
+.header-seguro .navbar-default .navbar-nav > .open > a, .header-seguro .navbar-default .navbar-nav > .open > a:focus, .header-seguro .navbar-default .navbar-nav > .open > a:hover {
+  color: var(--rosa);
+  background-color: transparent;
+}
+.header-seguro .dropdown-menu > .active > a, .header-seguro .dropdown-menu > .active > a:focus, .header-seguro .dropdown-menu > .active > a:hover {
+  background-color: #cccccc;
+  color: var(--rosa);
+  font-weight: 700;
+}
+.header-seguro .dropdown-menu {
+  min-width: 200px;
+}
+@media (max-width: 989px) {
+  .header-seguro .navbar-header {
+    float: none;
+  }
+  .header-seguro .navbar-left, .header-seguro .navbar-right {
+    float: none !important;
+  }
+  .header-seguro .navbar-toggle {
+    display: block;
+  }
+  .header-seguro .navbar-collapse {
+    border-top: 1px solid transparent;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  .header-seguro .navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+  }
+  .header-seguro .navbar-collapse.collapse {
+    display: none !important;
+  }
+  .header-seguro .navbar-nav {
+    float: none !important;
+    margin-top: 7.5px;
+  }
+  .header-seguro .navbar-nav > li {
+    float: none;
+  }
+  .header-seguro .navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .header-seguro .collapse.in {
+    display: block !important;
+  }
+  .header-seguro .navbar-default .navbar-collapse,
+.header-seguro .navbar-default .navbar-form {
+    background-color: var(--blanco);
+    border-radius: 0 0 50px 50px;
+  }
+  .header-seguro .punto {
+    display: none;
+  }
+  .header-seguro .dropdown-menu > li > a br {
+    display: none;
+  }
+  .header-seguro .navbar-nav .open .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
+@media (max-width: 767px) and (min-width: 0px) {
+  .header-seguro .navbar-default .navbar-nav > li .protege {
+    width: 50%;
+  }
+}
+.politics-and-terms h1 {
+  font-weight: bold;
+}
+.politics-and-terms .blue-text {
+  color: var(--azul);
+  font-weight: bold;
+}
+.politics-and-terms .tab-text {
+  padding-left: 80px;
+}
+
+.reconocimientos .rec-sec1 {
+  background: url(../img/reconocimientos/financiera-mexi-reconocimientos-banner-header.jpg);
+  background-position: center bottom;
+  background-size: cover;
+  min-height: 500px;
+  height: auto;
+}
+.reconocimientos .rec-sec1 h1 {
+  padding: 30px;
+  margin-top: 90px;
+}
+.reconocimientos .rec-sec4 {
+  background: url(../img/reconocimientos/financiera-mexi-reconocimientos-banner-gris.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.reconocimientos .rec-sec4 .line {
+  height: 5px;
+  width: 10%;
+  margin: auto;
+  display: block;
+}
+.reconocimientos .rec-sec7 .col {
+  padding-left: 0px;
+  margin-left: 0px;
+}
+.reconocimientos .rec-sec7 .bg-gris {
+  min-height: 500px;
+  height: auto;
+}
+.reconocimientos .rec-sec8 .col {
+  padding-right: 0px;
+  margin-right: 0px;
+}
+.reconocimientos .rec-sec8 .bg-gris {
+  min-height: 500px;
+  height: auto;
+}
+.reconocimientos .rec-sec10 {
+  background: url(../img/reconocimientos/financiera-mexi-reconocimientos-banner-gris.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.reconocimientos .rec-sec10 .line {
+  height: 5px;
+  width: 10%;
+  margin: auto;
+  display: block;
+}
+.reconocimientos .btn-rosa {
+  background: var(--rosa);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: inline-block;
+  padding: 8px 35px;
+  text-decoration: none;
+  color: var(--blanco);
+  text-align: center;
+  font-size: 20px;
+}
+.reconocimientos .btn-rosa:hover {
+  background: var(--azul);
+}
+.reconocimientos .align-items-center {
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 767px) and (min-width: 0px) {
+  .reconocimientos .rec-sec3 p {
+    min-height: 150px;
+  }
+  .reconocimientos .align-items-center {
+    display: inline-block;
+  }
+  .reconocimientos .rec-sec7 .bg-gris {
+    min-height: 0px;
+    height: auto;
+  }
+  .reconocimientos .rec-sec7 .col {
+    padding-right: 0px;
+    margin-right: 0px;
+  }
+  .reconocimientos .rec-sec7 .pad-sec {
+    padding: 50px 7% 0px;
+  }
+  .reconocimientos .rec-sec8 .bg-gris {
+    min-height: 0px;
+    height: auto;
+  }
+  .reconocimientos .rec-sec8 .col {
+    padding-left: 0px;
+    margin-left: 0px;
+  }
+  .reconocimientos .img-mobile {
+    margin: auto;
+    display: block;
+    width: 75%;
+  }
+}
+
+h1 {
+  font-size: 55px !important;
+}
+
+h2 {
+  font-size: 38px !important;
+}
+
+h3 {
+  font-size: 24px !important;
+}
+
+h4 {
+  font-size: 22px !important;
+}
+
+.description {
+  font-size: 28px !important;
+}
+
+p {
+  font-size: 18px;
+}
+
+li {
+  font-size: 18px !important;
+}
+
+.pad-sec {
+  padding: 50px 7%;
+}
+
+.bg-rosa {
+  background: var(--rosa);
+}
+
+.bg-azul {
+  background: var(--azul);
+}
+
+.bg-gris {
+  background: var(--gris-claro);
+}
+
+.text-white {
+  color: var(--blanco);
+}
+
+.text-rosa {
+  color: var(--rosa);
+}
+
+.text-azul {
+  color: var(--azul);
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.f-bold {
+  font-family: "NewJune-Bold", sans-serif;
+}
+
+.mt-3 {
+  margin-top: 30px !important;
+}
+
+.mt-4 {
+  margin-top: 40px !important;
+}
+
+.mt-5 {
+  margin-top: 50px !important;
+}
+
+.mb-3 {
+  margin-bottom: 30px !important;
+}
+
+.mb-4 {
+  margin-bottom: 40px !important;
+}
+
+.mb-5 {
+  margin-bottom: 50px !important;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.comisiones {
+  margin-top: 30px;
+}
+.comisiones .partop {
+  font-size: 12px;
+  background: var(--azul);
+  color: var(--blanco);
+  text-align: center;
+  font-family: "NewJune-Bold", sans-serif;
+  padding-top: 8px;
+  height: 50px;
+}
+.comisiones .partbottom {
+  font-size: 12px;
+  background: #f2f2f2;
+  color: var(--negro-texto);
+  text-align: center;
+  font-family: "NewJune-Bold", sans-serif;
+  padding-top: 8px;
+  display: block;
+  min-height: 50px;
+  height: auto;
+}
+
+.btn-whatsapp {
+  display: block;
+  position: fixed;
+  left: 0px;
+  background: #00bb2d;
+  bottom: 30px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  z-index: 9999;
+  margin-left: 15px;
+}
+.btn-whatsapp .fab {
+  color: #fff;
+  font-size: 40px;
+}
+
+.btn-leyenda {
+  display: block;
+  position: fixed;
+  right: 0px;
+  background: transparent;
+  bottom: 120px;
+  padding: 0 10px;
+  z-index: 9999;
+}
+.btn-leyenda img {
+  width: 65%;
+  float: right;
+}
+
+.green-sec {
+  background-color: var(--verde);
+  padding: 30px 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.desktop-item {
+  display: block;
+}
+
+.mobile-item {
+  display: none;
+}
+
+/* Medias query menu hamburguesa */
+@media (min-width: 1440px) {
+  .container {
+    width: 90%;
+  }
+}
+@media (max-width: 989px) {
+  h1 {
+    font-size: 30px !important;
+  }
+  h2 {
+    font-size: 28px !important;
+  }
+  .container {
+    width: 90%;
+  }
+  header .navbar-header {
+    float: none;
+  }
+  header .navbar-left, header .navbar-right {
+    float: none !important;
+  }
+  header .navbar-toggle {
+    display: block;
+  }
+  header .navbar-collapse {
+    border-top: 1px solid transparent;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  header .navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+  }
+  header .navbar-collapse.collapse {
+    display: none !important;
+  }
+  header .navbar-nav {
+    float: none !important;
+    margin-top: 7.5px;
+  }
+  header .navbar-nav > li {
+    float: none;
+  }
+  header .navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  header .collapse.in {
+    display: block !important;
+  }
+  header .navbar-default .navbar-collapse,
+header .navbar-default .navbar-form {
+    background-color: var(--blanco);
+    border-radius: 0 0 50px 50px;
+  }
+  header .punto {
+    display: none;
+  }
+  header .dropdown-menu > li > a br {
+    display: none;
+  }
+  header .navbar-nav .open .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  .desktop-item {
+    display: none;
+  }
+  .mobile-item {
+    display: block;
+  }
+}
